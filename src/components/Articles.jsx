@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { fecthAllArticles, fetchAllTopics } from "../utils/api";
 import { ArticleCard } from "./ArticleCard";
 import { Loader } from "./Loader";
@@ -23,7 +24,7 @@ export const Articles = () => {
   }, [topic]);
 
   const handleTopic = (e) => {
-    navigate(`/articles/${e.target.value}`);
+    navigate(`/articles/topic/${e.target.value}`);
     setLoading(true);
   };
 
@@ -32,9 +33,9 @@ export const Articles = () => {
   return (
     <>
       <div className="topic-button-container">
-        {topics.map((topic) => {
+        {topics.map((topic, index) => {
           return (
-            <button value={topic.slug} onClick={handleTopic}>
+            <button key={index} value={topic.slug} onClick={handleTopic}>
               #{topic.slug}
             </button>
           );
@@ -45,7 +46,9 @@ export const Articles = () => {
           {articles.map((article, index) => {
             return (
               <li key={index}>
-                <ArticleCard {...article} />
+                <Link to={`/articles/${article.article_id}`}>
+                  <ArticleCard {...article} />
+                </Link>
               </li>
             );
           })}
