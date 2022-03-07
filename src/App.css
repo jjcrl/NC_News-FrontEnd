@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
@@ -58,9 +62,6 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr;
-  background: #e0dbe5;
-  margin-bottom: 5px;
-  font-size: 1.2em;
   text-align: center;
 }
 
@@ -68,7 +69,6 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr;
-  background: #e0dbe5;
   text-align: center;
 }
 
@@ -101,6 +101,8 @@ button:hover {
 
 .single-article-card {
   margin: auto;
+  padding: 10px;
+  width: 90%;
 }
 
 #single-title {
@@ -143,6 +145,7 @@ button:hover {
     text-align: left;
     margin-left: 20px;
     font-style: italic;
+    margin-top: 0;
   }
   #single-creation {
     font-size: 1.2em;
@@ -169,4 +172,11 @@ button:hover {
   flex-direction: row;
   margin: 0;
   padding: 0;
+}
+
+.single-article-card-topic {
+  text-align: left;
+  padding-left: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0;
 }

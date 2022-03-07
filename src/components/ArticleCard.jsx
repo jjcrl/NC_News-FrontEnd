@@ -17,13 +17,13 @@ export const ArticleCard = (props) => {
 
       <div id="single-container">
         <ul id={props.single ? "single-creation" : "creation"}>
-          <li>{props.author}</li>
-          <li>{date}</li>
+          <li>a {props.author}</li>
+          <li>d {date}</li>
         </ul>
 
         <ul id={props.single ? "single-engagment" : "engagment"}>
-          <li>votes {props.votes}</li>
-          <li>comments {props.comment_count}</li>
+          <li>v {props.votes}</li>
+          <li>c {props.comment_count}</li>
         </ul>
       </div>
 

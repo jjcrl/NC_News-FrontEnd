@@ -9,7 +9,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <p>ncnews</p>
         <Navigation />
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
