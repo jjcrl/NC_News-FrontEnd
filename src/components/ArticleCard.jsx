@@ -2,6 +2,7 @@ import { formatDate } from "../utils/helperFuncs";
 
 export const ArticleCard = (props) => {
   const date = formatDate(props.created_at);
+
   return (
     <div className={props.single ? "single-article-card" : "article-card"}>
       <p

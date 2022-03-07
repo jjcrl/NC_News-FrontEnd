@@ -32,16 +32,16 @@ export const Articles = () => {
 
   return (
     <>
-      <div className="topic-button-container">
-        {topics.map((topic, index) => {
-          return (
-            <button key={index} value={topic.slug} onClick={handleTopic}>
-              #{topic.slug}
-            </button>
-          );
-        })}
-      </div>
       <div className="all-articles">
+        <div className="topic-button-container">
+          {topics.map((topic, index) => {
+            return (
+              <button key={index} value={topic.slug} onClick={handleTopic}>
+                #{topic.slug}
+              </button>
+            );
+          })}
+        </div>
         <ul>
           {articles.map((article, index) => {
             return (
