@@ -61,6 +61,7 @@
   background: #e0dbe5;
   margin-bottom: 5px;
   font-size: 1.2em;
+  text-align: center;
 }
 
 #engagment {
@@ -68,6 +69,7 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 2fr;
   background: #e0dbe5;
+  text-align: center;
 }
 
 .all-articles {

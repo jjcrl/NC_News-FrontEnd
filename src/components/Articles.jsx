@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fecthAllArticles } from "../utils/api";
 import { ArticleCard } from "./ArticleCard";
+import { Loader } from "./Loader";
 
 export const Articles = () => {
   const [articles, setArticle] = useState([]);
@@ -13,7 +14,7 @@ export const Articles = () => {
     });
   }, []);
 
-  if (loading) return <p>loading ...</p>;
+  if (loading) return <Loader />;
 
   return (
     <div className="all-articles">
