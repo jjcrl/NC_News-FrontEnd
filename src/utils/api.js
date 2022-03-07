@@ -21,5 +21,3 @@ export const fetchAllTopics = () => {
     return res.data.topics;
   });
 };
-
-//

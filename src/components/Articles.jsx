@@ -31,11 +31,11 @@ export const Articles = () => {
 
   return (
     <>
-      <div>
+      <div className="topic-button-container">
         {topics.map((topic) => {
           return (
             <button value={topic.slug} onClick={handleTopic}>
-              {topic.slug}
+              #{topic.slug}
             </button>
           );
         })}

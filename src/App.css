@@ -73,7 +73,28 @@
 }
 
 .all-articles {
-  border: blue 1px dashed;
   display: flex;
   flex-direction: column;
+}
+
+.topic-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 30%;
+  margin: auto;
+  padding: 5px;
+}
+
+.topic-button-container button {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  background: none;
+  border: none;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background: #e0dbe5;
 }
