@@ -1,7 +1,6 @@
 import { formatDate } from "../utils/helperFuncs";
 
 export const ArticleCard = (props) => {
-  console.log(props);
   const date = formatDate(props.created_at);
   return (
     <div className="article-card">
