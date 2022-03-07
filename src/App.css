@@ -9,15 +9,7 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-}
-
-@media (min-width: 300px) {
-  .article-card {
-    width: 320px !important;
-  }
-  .all-articles ul {
-    justify-content: space-evenly;
-  }
+  justify-content: space-evenly;
 }
 
 .article-card ul {
@@ -33,6 +25,12 @@
   margin: 10px;
   color: #452647;
   border: solid 1px #756069;
+}
+
+@media only screen and (min-width: 375px) {
+  .article-card {
+    width: 350px;
+  }
 }
 
 #title {
