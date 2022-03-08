@@ -1,4 +1,5 @@
 import { formatDate } from "../utils/helperFuncs";
+import { Gen } from "./Gen";
 
 export const ArticleCard = (props) => {
   const date = formatDate(props.created_at);
@@ -14,7 +15,9 @@ export const ArticleCard = (props) => {
       </p>
       <p id={props.single ? "single-title" : "title"}>{props.title}</p>
 
-      <svg id="temp-fill" />
+      <div id="artwork">
+        <Gen />
+      </div>
 
       <div id="single-container">
         <ul id={props.single ? "single-creation" : "creation"}>
