@@ -12,7 +12,7 @@ a {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  margin-left: 3em;
+  margin-left: 7em;
 }
 
 .all-articles ul {
@@ -40,6 +40,10 @@ a {
 }
 
 @media only screen and (min-width: 375px) {
+  .App {
+    flex-direction: column;
+  }
+
   .article-card {
     width: 350px;
   }
@@ -57,20 +61,6 @@ a {
   padding: 0;
   margin: 0;
   color: #756069;
-}
-
-#creation {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 2fr;
-  text-align: center;
-}
-
-#engagment {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 2fr;
-  text-align: center;
 }
 
 .topic-button-container {
@@ -94,41 +84,6 @@ a {
 
 button:hover {
   background: #e0dbe5;
-}
-
-.single-article-card {
-  margin: auto;
-  padding: 10px;
-  width: 90%;
-}
-
-#single-title {
-  font-size: 4em;
-  text-align: left;
-  margin: 0.5em;
-}
-
-.single-card-body {
-  font-size: 2em;
-  text-align: left;
-  margin: 1em;
-  text-indent: 1em;
-}
-
-#single-creation {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  font-size: 2em;
-}
-
-#single-engagment {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  font-size: 1.1em;
 }
 
 @media only screen and (min-width: 375px) {
@@ -162,24 +117,6 @@ button:hover {
     padding: 0;
     margin: auto;
   }
-}
-
-#details-container {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-#single-details-container {
-  visibility: hidden;
-}
-
-.single-article-card-topic {
-  text-align: left;
-  padding-left: 1.5em;
-  margin-top: 1em;
-  margin-bottom: 0;
 }
 
 .nav-container {
@@ -267,6 +204,15 @@ button:hover {
   border: solid 1px black;
 }
 
+.xl-gen-grid {
+  width: 1000px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: solid 1px black;
+}
+
 #cell-1 {
   background-color: black;
 }
@@ -277,4 +223,96 @@ button:hover {
 
 #cell-3 {
   background-color: white;
+}
+
+.single-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-article-card {
+  width: 70%;
+  margin: auto;
+  border: 1px black dashed;
+}
+
+#single-title {
+  font-size: 4em;
+  text-align: left;
+  margin: 0.5em;
+}
+
+.single-card-body {
+  margin: 1em;
+  text-indent: 1em;
+  font-size: 1.7em !important;
+  text-align: left;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  line-height: 30px;
+  font-weight: 400 !important;
+}
+
+.creation {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin: auto;
+  padding-left: 20px;
+  font-size: 1.5em;
+  color: #756069;
+}
+
+.single-article-card-topic {
+  text-align: left;
+  padding-left: 1em;
+  font-size: 1.45em;
+  color: #756069;
+  font-weight: 500;
+}
+
+.voting {
+  border: solid 1px red;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 13.4em;
+}
+
+.voting p {
+  font-size: 1.5em;
+  margin: auto;
+  padding: 20px;
+}
+
+.voting button {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+}
+
+.comments-container {
+  width: 70%;
+  margin: auto;
+}
+
+.comments-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-card {
+  background-color: #756069;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#toggle-comments {
+  width: 20%;
+  margin-left: 214px;
+  padding: 5px;
 }

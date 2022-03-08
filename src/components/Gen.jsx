@@ -9,14 +9,14 @@ export const Gen = (props) => {
   }
 
   return (
-    <div className={props.single ? "single-grid-container" : "gen-grid"}>
-      {arr.map((n) => {
+    <div className={props.single ? "xl-gen-grid" : "gen-grid"}>
+      {arr.map((n, i) => {
         if (n > 5) {
-          return <span id="cell-1"></span>;
+          return <span key={i} id="cell-1"></span>;
         } else if (n > 3) {
-          return <span id="cell-2"></span>;
+          return <span key={i} id="cell-2"></span>;
         } else {
-          return <span id="cell-3"></span>;
+          return <span key={i} id="cell-3"></span>;
         }
       })}
     </div>
