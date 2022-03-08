@@ -26,7 +26,7 @@ export const SingleArticle = () => {
       <ArticleCard single={true} {...article} />
       <Voting id={id} votes={article.votes} />
       <ShowWrapper>
-        <Comments id={id} />
+      <Comments id={id} />
       </ShowWrapper>
     </div>
   );
