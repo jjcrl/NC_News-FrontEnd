@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticle } from "../utils/api";
 import { ArticleCard } from "./ArticleCard";
-import { Loader } from "./Loader";
 import { Comments } from "./Comments";
+import { Loader } from "./Loader";
+import { Voting } from "./Voting";
 import { ShowWrapper } from "./ShowWrapper";
 
 export const SingleArticle = () => {
@@ -21,11 +22,11 @@ export const SingleArticle = () => {
   if (loading) return <Loader />;
 
   return (
-    <div>
+    <div className="single-article">
       <ArticleCard single={true} {...article} />
-      {/* <Voting id={id} votes={article.votes} /> */}
+      <Voting id={id} votes={article.votes} />
       <ShowWrapper>
-        <Comments id={id} />
+      <Comments id={id} />
       </ShowWrapper>
     </div>
   );
