@@ -27,3 +27,10 @@ export const fetchArticle = (id) => {
     return res.data.article;
   });
 };
+
+export const patchVotes = (vote, id) => {
+  const body = { inc_votes: vote, username: "butterbridge" };
+  return api.patch(`/articles/${id}`, body).then((res) => {
+    return res.data.article.votes;
+  });
+};
