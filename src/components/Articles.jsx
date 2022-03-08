@@ -31,17 +31,17 @@ export const Articles = () => {
   if (loading) return <Loader />;
 
   return (
-    <>
+    <div className="all-articles-container">
+      <div className="topic-button-container">
+        {topics.map((topic, index) => {
+          return (
+            <button key={index} value={topic.slug} onClick={handleTopic}>
+              #{topic.slug}
+            </button>
+          );
+        })}
+      </div>
       <div className="all-articles">
-        <div className="topic-button-container">
-          {topics.map((topic, index) => {
-            return (
-              <button key={index} value={topic.slug} onClick={handleTopic}>
-                #{topic.slug}
-              </button>
-            );
-          })}
-        </div>
         <ul>
           {articles.map((article, index) => {
             return (
@@ -54,6 +54,6 @@ export const Articles = () => {
           })}
         </ul>
       </div>
-    </>
+    </div>
   );
 };

@@ -1,16 +1,15 @@
-export const Gen = () => {
+export const Gen = (props) => {
   const arr = [];
 
   let n = 0;
 
-  for (let i = 0; i < 42; i++) {
+  for (let i = 0; i < 104; i++) {
     n = Math.floor(Math.random() * 10);
     arr.push(n);
   }
 
-  console.log(arr);
   return (
-    <div className="gen-grid">
+    <div className={props.single ? "single-grid-container" : "gen-grid"}>
       {arr.map((n) => {
         if (n > 5) {
           return <span id="cell-1"></span>;

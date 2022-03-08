@@ -2,13 +2,17 @@ a {
   text-decoration: none !important;
 }
 
-body {
-  background: #e0dbe5;
-}
-
 .App {
   display: flex;
   flex-direction: row;
+}
+
+.all-articles {
+  border: solid 1px #e6667a;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 3em;
 }
 
 .all-articles ul {
@@ -27,11 +31,11 @@ body {
 
 .article-card {
   padding: 10px;
-  width: 500px;
+  width: 380px !important;
   display: flex;
   flex-direction: column;
   margin: 10px;
-  color: #452647;
+  color: black;
   border: solid 1px #756069;
 }
 
@@ -69,13 +73,6 @@ body {
   text-align: center;
 }
 
-.all-articles {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  margin-left: 3em;
-}
-
 .topic-button-container {
   display: flex;
   flex-direction: row;
@@ -83,6 +80,7 @@ body {
   width: 30%;
   margin: auto;
   padding: 5px;
+  border: solid 1px #e6667a;
 }
 
 .topic-button-container button {
@@ -166,11 +164,15 @@ button:hover {
   }
 }
 
-#single-container {
+#details-container {
   display: flex;
   flex-direction: row;
   margin: 0;
   padding: 0;
+}
+
+#single-details-container {
+  visibility: hidden;
 }
 
 .single-article-card-topic {
@@ -253,26 +255,26 @@ button:hover {
 
 #artwork {
   padding-top: 10px;
-  padding-bottom: 10px;
   margin: auto;
 }
 
 .gen-grid {
-  width: 350px;
-  height: 150px;
+  width: 370px;
+  height: 160px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: solid 1px black;
 }
 
 #cell-1 {
-  background-color: #452647;
+  background-color: black;
 }
 
 #cell-2 {
-  background-color: #756069;
+  background-color: black;
 }
 
 #cell-3 {
-  background-color: #453141;
+  background-color: white;
 }
