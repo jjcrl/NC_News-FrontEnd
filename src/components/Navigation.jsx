@@ -11,7 +11,7 @@ export const Navigation = () => {
           </Link>
           <Link className="nav-item" to="articles">
             <img src="https://img.icons8.com/ios/50/ffffff/a.png" />
-            <p id="nav-text">Article</p>
+            <p id="nav-text">Articles</p>
           </Link>
           <Link className="nav-item" to="/article_editor">
             <img src="https://img.icons8.com/ios/50/ffffff/edit--v1.png" />

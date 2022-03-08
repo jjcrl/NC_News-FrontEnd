@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
-import { Dashboard } from "./components/Dashborad";
+import { Dashboard } from "./components/Dashboard";
 import { Articles } from "./components/Articles";
 import { SingleArticle } from "./components/SingleArticle";
 
