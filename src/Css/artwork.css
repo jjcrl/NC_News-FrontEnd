@@ -1,0 +1,37 @@
+#artwork {
+  padding-top: 10px;
+  margin: auto;
+}
+
+.gen-grid {
+  width: 300px;
+  height: 150px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: solid 2px black;
+  gap: 0;
+}
+
+.xl-gen-grid {
+  width: 300px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: solid 1px black;
+}
+
+#cell-1 {
+  background-color: black;
+  border: solid 1px black;
+}
+
+#cell-2 {
+  background-color: black;
+  border: solid 1px black;
+}
+
+#cell-3 {
+  background-color: white;
+}

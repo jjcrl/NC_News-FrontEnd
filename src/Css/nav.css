@@ -1,0 +1,14 @@
+.nav-container {
+  border: solid 1px black;
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav img {
+  padding: 15px;
+}
