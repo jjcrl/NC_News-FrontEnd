@@ -1,12 +1,17 @@
+import { formatDate } from "../utils/helperFuncs";
 import { Voting } from "./Voting";
 
 export const CommentCard = (props) => {
+  const date = formatDate(props.created_at);
+
   return (
     <div className="comment-card">
-      <p>{props.author}</p>
-      <p>{props.created_at}</p>
-      <Voting votes={props.votes} />
-      <p id="comment-body">{props.body}</p>
+      <div className="comment-card-creation">
+        <p id="author">{props.author}</p>
+        <Voting comment={true} votes={props.votes} />
+      </div>
+
+      <p className="comment-card-body">{props.body}</p>
     </div>
   );
 };

@@ -68,7 +68,7 @@ export const Gen = (props) => {
   }
 
   return (
-    <div className={props.single ? "xl-gen-grid" : "gen-grid"}>
+    <div className="gen-grid">
       {arr.map((n, i) => {
         if (n > 5) {
           return <span key={i} id="cell-1"></span>;

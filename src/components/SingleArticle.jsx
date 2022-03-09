@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { fetchArticle } from "../utils/api";
+import { fetchArticle, fetchArticleComments } from "../utils/api";
 import { ArticleCard } from "./ArticleCard";
 import { Comments } from "./Comments";
 import { Loader } from "./Loader";
@@ -26,7 +26,7 @@ export const SingleArticle = () => {
       <ArticleCard single={true} {...article} />
       <Voting id={id} votes={article.votes} />
       <ShowWrapper>
-      <Comments id={id} />
+        <Comments id={id} />
       </ShowWrapper>
     </div>
   );

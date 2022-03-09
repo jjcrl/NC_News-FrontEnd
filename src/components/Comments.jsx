@@ -9,6 +9,9 @@ export const Comments = ({ id }) => {
 
   useEffect(() => {
     fetchArticleComments(id).then((data) => {
+      data.sort((a, b) => {
+        return a.votes - b.votes;
+      });
       setComments(data);
       setLoading(false);
     });

@@ -6,19 +6,19 @@ export const ArticleCard = (props) => {
 
   return (
     <div className={props.single ? "single-article-card" : "article-card"}>
-      <p id={props.single ? "single-article-card-topic" : "article-card-topic"}>
-        {props.topic}
-      </p>
       <div id="artwork">
         <Gen single={props.single} />
       </div>
 
-      <p id={props.single ? "single-title" : "title"}>{props.title}</p>
+      <p id={props.single ? "single-article-card-topic" : "article-card-topic"}>
+        #{props.topic}
+      </p>
+      <p id={props.single ? "single-title" : "title"}>{props.title}_</p>
 
       {props.single ? (
         <div className="creation">
-          <p>{props.author}</p>
           <p>{date}</p>
+          <p>{props.author}</p>
         </div>
       ) : null}
 
