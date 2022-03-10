@@ -356,6 +356,42 @@ a {
   padding-bottom: 40px;
 }
 
+.comment-form-container {
+  width: 85%;
+  padding: 15px;
+}
+
+.comment-form-container input {
+  width: 99%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+  padding: 5px;
+}
+.comment-form-container legend {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#feildset {
+  border: solid 4px black;
+}
+
+.comment-form-container button {
+  background-color: black;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  padding: 10px;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
 /* 
 .nav-container {
   height: 100%;
