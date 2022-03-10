@@ -35,9 +35,9 @@ export const Articles = () => {
       <div className="topic-button-container">
         {topics.map((topic, index) => {
           return (
-            <button key={index} value={topic.slug} onClick={handleTopic}>
+            <p key={index} value={topic.slug} onClick={handleTopic}>
               #{topic.slug}
-            </button>
+            </p>
           );
         })}
       </div>

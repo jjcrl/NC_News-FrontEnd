@@ -26,6 +26,11 @@
   border: solid 2px black;
 } */
 
+.gen-grid span {
+  color: black;
+  font-weight: 900;
+}
+
 #cell-1 {
   background-color: black;
   border: solid 1px black;
