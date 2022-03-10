@@ -13,7 +13,7 @@ export const ArticleCard = (props) => {
       <p id={props.single ? "single-article-card-topic" : "article-card-topic"}>
         #{props.topic}
       </p>
-      <p id={props.single ? "single-title" : "title"}>{props.title}_</p>
+      <p id={props.single ? "single-title" : "title"}>{props.title}</p>
 
       {props.single ? (
         <div className="creation">

@@ -14,6 +14,31 @@
   padding: 20px;
 }
 
+.gen-grid-v2 {
+  background-color: white;
+  background-color: white;
+  width: 330px;
+  height: 260px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: solid 2px black;
+  padding: 20px;
+  gap: 0;
+}
+
+.gen-grid-v2 span {
+  color: black;
+  font-weight: 800;
+  text-align: center;
+  margin: auto;
+  font-size: 2.4em;
+}
+
+#void {
+  font-size: 1.8em;
+}
+
 /* .xl-gen-grid {
   width: 310px;
   height: 150px;

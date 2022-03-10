@@ -12,3 +12,16 @@
 .nav img {
   padding: 15px;
 }
+
+/* @media screen and (min-width: 500px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav img {
+    padding: 30px !important;
+  }
+  .nav-container {
+    position: fixed;
+    height: 100%;
+  }
+} */

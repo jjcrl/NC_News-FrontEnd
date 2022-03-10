@@ -6,10 +6,12 @@ import { Comments } from "./Comments";
 import { Loader } from "./Loader";
 import { Voting } from "./Voting";
 import { ShowWrapper } from "./ShowWrapper";
+import { PostComment } from "./PostComment";
 
 export const SingleArticle = () => {
   const [article, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [newComment, setNewComment] = useState();
   const { id } = useParams();
 
   useEffect(() => {
@@ -26,7 +28,12 @@ export const SingleArticle = () => {
       <ArticleCard single={true} {...article} />
       <Voting id={id} votes={article.votes} />
       <ShowWrapper>
-        <Comments id={id} />
+        <PostComment setNewComment={setNewComment} id={id} />
+        <Comments
+          id={id}
+          newComment={newComment}
+          setNewComment={setNewComment}
+        />
       </ShowWrapper>
     </div>
   );

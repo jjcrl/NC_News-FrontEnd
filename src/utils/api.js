@@ -40,3 +40,14 @@ export const fetchArticleComments = (id) => {
     return res.data.comments;
   });
 };
+
+export const postComment = (comment) => {
+  console.log(comment);
+  const body = {
+    username: comment.user,
+    body: comment.body,
+  };
+  return api.post(`/articles/${comment.id}/comments`, body).then((res) => {
+    return res.data.comment;
+  });
+};

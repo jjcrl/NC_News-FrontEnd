@@ -3,7 +3,7 @@ import { fetchArticleComments } from "../utils/api";
 import { CommentCard } from "./CommentCard";
 import { Loader } from "./Loader";
 
-export const Comments = ({ id }) => {
+export const Comments = ({ id, newComment }) => {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -12,10 +12,11 @@ export const Comments = ({ id }) => {
       data.sort((a, b) => {
         return a.votes - b.votes;
       });
-      setComments(data);
+
+      setComments(data.reverse());
       setLoading(false);
     });
-  }, [id]);
+  }, [id, newComment]);
 
   if (loading) return <Loader />;
 

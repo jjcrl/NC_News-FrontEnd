@@ -9,11 +9,24 @@ a {
 }
 
 @media screen and (min-width: 500px) {
+  /* .App {
+    flex-direction: row;
+  } */
+
+  /* .all-articles-container {
+    margin-left: 6em;
+  } */
+
+  .all-articles {
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+
   .all-articles ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .article-card {
@@ -27,11 +40,28 @@ a {
   }
 
   #single-card-body {
-    font-size: 2.2em !important;
+    font-size: 2.6em !important;
+    line-height: 45px !important;
+    padding-right: 1em !important;
+    padding-left: 1em !important;
+  }
+
+  #single-title {
+    font-size: 4em !important;
+    line-height: 80px !important;
   }
 
   .single-article {
-    margin: 3em;
+    margin: 5em !important;
+    margin-left: 10em !important;
+  }
+
+  .voting-text {
+    font-size: 1.5em;
+  }
+
+  .comment-card-body {
+    font-size: 1.7em !important;
   }
 }
 
@@ -239,6 +269,7 @@ a {
   gap: 5px;
   margin: auto;
 }
+
 .voting p {
   font-size: 3.5em;
   font-style: italic;
@@ -323,6 +354,42 @@ a {
   margin: auto;
   width: 99%;
   padding-bottom: 40px;
+}
+
+.comment-form-container {
+  width: 85%;
+  padding: 15px;
+}
+
+.comment-form-container input {
+  width: 99%;
+  height: 100px;
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+  padding: 5px;
+}
+.comment-form-container legend {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#feildset {
+  border: solid 4px black;
+}
+
+.comment-form-container button {
+  background-color: black;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  padding: 10px;
+  font-weight: 700;
+  margin-top: 1em;
 }
 
 /* 
