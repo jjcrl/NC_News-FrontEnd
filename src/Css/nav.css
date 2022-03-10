@@ -13,7 +13,7 @@
   padding: 15px;
 }
 
-@media screen and (min-width: 500px) {
+/* @media screen and (min-width: 500px) {
   .nav {
     flex-direction: column;
   }
@@ -24,4 +24,4 @@
     position: fixed;
     height: 100%;
   }
-}
+} */

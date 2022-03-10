@@ -9,13 +9,13 @@ a {
 }
 
 @media screen and (min-width: 500px) {
-  .App {
+  /* .App {
     flex-direction: row;
-  }
+  } */
 
-  .all-articles-container {
+  /* .all-articles-container {
     margin-left: 6em;
-  }
+  } */
 
   .all-articles {
     padding-right: 3em;

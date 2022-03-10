@@ -99,7 +99,7 @@ export const Gen = (props) => {
   ];
   //42
 
-  for (let i = 0; i < 58; i++) {
+  for (let i = 0; i < 21; i++) {
     const rS = Math.floor(Math.random() * symbols.length);
     arr.push(symbols[rS]);
     const rL = Math.floor(Math.random() * letters.length);
@@ -114,12 +114,12 @@ export const Gen = (props) => {
   }
 
   // return (
-  //   <div className="gen-grid">
+  //   <div className="gen-grid-v2">
   //     {arr.map((n, i) => {
-  //       if (cellA[i] < 3) {
+  //       if (cellA[i] <= 5) {
   //         return <span>{n}</span>;
   //       } else {
-  //         return <span></span>;
+  //         return <span id="void">˟</span>;
   //       }
   //     })}
   //   </div>
