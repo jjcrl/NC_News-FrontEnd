@@ -1,3 +1,8 @@
+import "../Css/loader.css";
 export const Loader = () => {
-  return <p>Loading ...</p>;
+  return (
+    <div className="loader">
+      <p>loading...</p>
+    </div>
+  );
 };
