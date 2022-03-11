@@ -1,59 +1,75 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { fecthAllArticles, fetchAllTopics } from "../utils/api";
+import { countTopics, countTopicVotes } from "../utils/helperFuncs";
 import { ArticleCard } from "./ArticleCard";
 import { Loader } from "./Loader";
+import { TopArticles } from "./TopArticles";
+import { TopicCard } from "./TopicCard";
 
 export const Articles = () => {
   const [articles, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const [topics, setTopics] = useState([]);
+  const [topicCount, setTopicCount] = useState();
+  const [topicVoteCount, setTopicVoteCount] = useState();
+
   const { topic } = useParams();
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetchAllTopics().then((data) => {
       setTopics(data);
     });
 
-    fecthAllArticles(topic).then((data) => {
+    fecthAllArticles().then((data) => {
       setArticle(data);
-      setLoading(false);
     });
-  }, [topic]);
+    setLoading(false);
+  }, []);
 
-  const handleTopic = (e) => {
-    navigate(`/articles/topic/${e.target.value}`);
-    setLoading(true);
-  };
+  // useEffect(() => {
+  //   const count = countTopics(articles, "topic");
+  //   setTopicCount(count);
+  //   const voteCount = countTopicVotes(articles, "topic");
+  //   setTopicVoteCount(voteCount);
+  // }, [articles]);
 
   if (loading) return <Loader />;
 
   return (
-    <div className="all-articles-container">
-      <div className="topic-button-container">
-        {topics.map((topic, index) => {
-          return (
-            <button key={index} value={topic.slug} onClick={handleTopic}>
-              #{topic.slug}
-            </button>
-          );
-        })}
-      </div>
-      <div className="all-articles">
-        <ul>
-          {articles.map((article, index) => {
+    <>
+      {/* <TopArticles articles={articles} /> */}
+
+      <main className="all-articles-container">
+        {/* <div className="topic-container">
+          {topics.map((topic, i) => {
             return (
-              <li key={index}>
-                <Link to={`/articles/${article.article_id}`}>
-                  <ArticleCard {...article} />
-                </Link>
-              </li>
+              <TopicCard
+                count={topicCount[topic.slug]}
+                votes={topicVoteCount[topic.slug]}
+                {...topic}
+                key={i}
+              />
             );
           })}
-        </ul>
-      </div>
-    </div>
+        </div> */}
+
+        <div className="all-articles">
+          <ul>
+            {articles.map((article, i) => {
+              return (
+                <li key={i}>
+                  <Link to={`/articles/${article.article_id}`}>
+                    <ArticleCard {...article} />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </main>
+    </>
   );
 };

@@ -8,6 +8,33 @@ a {
   width: 100%;
 }
 
+.top-articles {
+  padding: 5px;
+  margin: 5px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.top-articles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.top-articles li {
+  padding: 0;
+  margin: auto;
+}
+
+#top-article-card {
+  font-size: 1em !important;
+}
+
 @media screen and (min-width: 500px) {
   /* .App {
     flex-direction: row;
@@ -17,12 +44,7 @@ a {
     margin-left: 6em;
   } */
 
-  .all-articles {
-    padding-right: 3em;
-    padding-left: 3em;
-  }
-
-  .all-articles ul {
+  /* .all-articles ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -32,7 +54,7 @@ a {
   .article-card {
     width: 380px;
     padding-top: 3px;
-  }
+  } */
 
   .gen-grid {
     width: 330px !important;
@@ -40,10 +62,10 @@ a {
   }
 
   #single-card-body {
-    font-size: 2.6em !important;
-    line-height: 45px !important;
-    padding-right: 1em !important;
-    padding-left: 1em !important;
+    font-size: 2.3em !important;
+    line-height: 47px !important;
+    padding-right: 0.5em !important;
+    padding-left: 0.5em !important;
   }
 
   #single-title {
@@ -67,24 +89,96 @@ a {
 
 .all-articles-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   justify-content: center;
 }
 
-.topic-button-container {
+.topic-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 4em;
+  padding: 15px;
+  margin: 0;
 }
 
-.topic-button-container p {
+.single-topic-card {
   background-color: black;
-  color: white;
   text-align: center;
-  border: solid 1px green;
-  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border-top: 10px solid #3b3035;
+}
+
+.single-topic-card button {
+  font-size: 1.3em;
+  width: 80%;
+  margin: auto;
+  border: none;
+  background-color: white;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.single-topic-card p {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+
+#topic-title {
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: right;
   font-style: italic;
+  padding-right: 1em;
+}
+
+#topic-description {
+  font-size: 1.3em;
+  margin-top: -1em;
+  text-align: right;
+  padding-right: 1.4em;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1em;
+  gap: 3em;
+}
+
+.topic-count {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 5px;
+}
+
+.topic-votes {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  gap: 5px;
+}
+
+#stats {
+  font-size: 4em;
+  font-style: oblique;
   font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#stats-text {
+  font-size: 2.2em;
+  margin: 0;
+  padding-top: 3px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .all-articles {
@@ -200,7 +294,6 @@ a {
   border-bottom: #756069 solid 1px;
   font-weight: 500;
   color: #3b3035;
-  text-indent: 1em;
 }
 
 .voting-comment {
