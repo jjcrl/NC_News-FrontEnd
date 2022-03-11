@@ -42,7 +42,7 @@ export const Voting = (props) => {
       </div>
 
       <div className={props.comment ? "voting-comment-text" : "voting-text"}>
-        <p>{votes}</p>
+        <p>{props.votes}</p>
         <p id="v-text">votes</p>
       </div>
     </div>

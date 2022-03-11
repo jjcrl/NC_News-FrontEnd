@@ -14,30 +14,25 @@ export const SingleArticle = (props) => {
   const [article, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
   const [newComment, setNewComment] = useState();
-
-  const [totalPosts, setTotalPosts] = useState();
-  const [totalVotes, setTotalVotes] = useState();
-
   const { id } = useParams();
 
   useEffect(() => {
     fetchArticle(id).then((data) => {
       setArticle(data);
     });
-  }, [id]);
-
-  useEffect(() => {
-    setTotalPosts(props.count[article.topic]);
-    setTotalVotes(props.votes[article.topic]);
     setLoading(false);
-  }, [props.count, props.votes]);
+  }, [id]);
 
   if (loading) return <Loader />;
 
   return (
     <div className="single-article">
-      <ArticleCard single={true} {...article} />
-      <TopicCard count={totalPosts} votes={totalVotes} />
+      <ArticleCard
+        votes={props.votes}
+        count={props.count[article.topic]}
+        single={true}
+        {...article}
+      />
       <Voting id={id} votes={article.votes} />
       <ShowWrapper>
         <PostComment setNewComment={setNewComment} id={id} />

@@ -11,65 +11,61 @@ import { TopicCard } from "./TopicCard";
 export const Articles = () => {
   const [articles, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [topics, setTopics] = useState([]);
-  const [topicCount, setTopicCount] = useState();
-  const [topicVoteCount, setTopicVoteCount] = useState();
 
   const { topic } = useParams();
+
+  useEffect(() => {
+    fecthAllArticles(topic).then((data) => {
+      setArticle(data);
+    });
+    setLoading(false);
+  }, [topic]);
 
   useEffect(() => {
     fetchAllTopics().then((data) => {
       setTopics(data);
     });
-
-    fecthAllArticles().then((data) => {
-      setArticle(data);
-    });
-    setLoading(false);
   }, []);
-
-  // useEffect(() => {
-  //   const count = countTopics(articles, "topic");
-  //   setTopicCount(count);
-  //   const voteCount = countTopicVotes(articles, "topic");
-  //   setTopicVoteCount(voteCount);
-  // }, [articles]);
 
   if (loading) return <Loader />;
 
   return (
     <>
-      {/* <TopArticles articles={articles} /> */}
-
-      <main className="all-articles-container">
-        {/* <div className="topic-container">
-          {topics.map((topic, i) => {
-            return (
-              <TopicCard
-                count={topicCount[topic.slug]}
-                votes={topicVoteCount[topic.slug]}
-                {...topic}
-                key={i}
-              />
-            );
-          })}
-        </div> */}
-
-        <div className="all-articles">
+      <TopArticles articles={articles} />
+      <div className="main-container">
+        <div className="topics-container">
           <ul>
-            {articles.map((article, i) => {
+            {topics.map((topic, i) => {
               return (
-                <li key={i}>
-                  <Link to={`/articles/${article.article_id}`}>
-                    <ArticleCard {...article} />
-                  </Link>
-                </li>
+                <Link to={`/articles/topic/${topic.slug}`}>
+                  <li>#{topic.slug}</li>
+                </Link>
               );
-            })}
+            })}{" "}
           </ul>
         </div>
-      </main>
+
+        <main className="all-articles-container">
+          <div className="sorting">
+            <p>sorting</p>
+          </div>
+
+          <div className="all-articles">
+            <ul>
+              {articles.map((article, i) => {
+                return (
+                  <li key={i}>
+                    <Link to={`/articles/${article.article_id}`}>
+                      <ArticleCard {...article} />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </main>
+      </div>
     </>
   );
 };

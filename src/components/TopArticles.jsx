@@ -2,22 +2,24 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArticleCard } from "./ArticleCard";
 import { useState } from "react";
+import { Loader } from "./Loader";
 
-export const TopArticles = ({ articles }) => {
+export const TopArticles = (props) => {
   const [topArticles, setTopArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    articles.sort((a, b) => {
-      return a.votes - b.votes;
-    });
-    const sorted = articles.reverse();
-    setTopArticles([sorted[0], sorted[1], sorted[2]]);
-  }, [articles]);
+    props.articles.sort((a, b) => a.votes - b.votes);
+    const topFive = props.articles.slice(0, 6);
+    setTopArticles(topFive);
+    setLoading(false);
+  }, [props.articles]);
 
+  if (loading) return <Loader />;
   return (
-    <div className="top-articles">
-      <fieldset>
-        <legend>top articles</legend>
+    <>
+      <p id="trending-title">Trending Articles</p>
+      <div className="top-articles">
         <ul>
           {topArticles.map((article) => {
             return (
@@ -29,7 +31,7 @@ export const TopArticles = ({ articles }) => {
             );
           })}
         </ul>
-      </fieldset>
-    </div>
+      </div>
+    </>
   );
 };

@@ -15,37 +15,32 @@
 }
 
 .letters-artwork {
-  border: solid 1px red;
   position: fixed;
-  z-index: -1;
-  left: 0;
   right: 0;
-  top: 0;
-  padding-top: 5em;
-  padding: ;
+  margin-right: 5em;
+  z-index: -1;
+  padding: 3em;
 }
 
 .gen-grid-v2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .gen-grid-v2 span {
-  font-weight: 800;
+  font-weight: 700;
   text-align: center;
-  font-size: 6em;
-  color: gray;
-  border: solid 1px red;
+  font-size: 3.5em;
+  color: grey;
+  margin: auto;
+  padding: 0;
+  opacity: 35%;
 }
 
 .gen-grid span {
   color: black;
   font-weight: 900;
-}
-
-.gen-grid-v2 span:nth-child(1) {
-  color: red;
 }
 
 #cell-1 {
