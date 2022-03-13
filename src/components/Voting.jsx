@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { patchVotes } from "../utils/api";
+import { useEffect } from "react";
 
 export const Voting = (props) => {
-  const [votes, setVotes] = useState(props.votes);
+  const [votes, setVotes] = useState();
   const [upVoteDisable, setUpVoteDisable] = useState(false);
   const [downVoteDisable, setdownVoteDisable] = useState(false);
+
+  useEffect(() => {
+    setVotes(props.votes);
+  }, [props.votes]);
 
   const handleVote = (vote) => {
     if (vote === 1) {
@@ -42,7 +47,7 @@ export const Voting = (props) => {
       </div>
 
       <div className={props.comment ? "voting-comment-text" : "voting-text"}>
-        <p>{props.votes}</p>
+        <p>{votes}</p>
         <p id="v-text">votes</p>
       </div>
     </div>

@@ -39,6 +39,7 @@ function App() {
   }, [articles]);
 
   if (loading) return <Loader />;
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -51,7 +52,7 @@ function App() {
             path="/articles/:id"
             element={
               <SingleArticle
-                count={topicCount.posts}
+                posts={topicCount.posts}
                 votes={topicVoteCount.votes}
               />
             }

@@ -12,6 +12,55 @@ a {
   overflow-y: hidden;
 }
 
+.top-article-card {
+  border: solid 1px black;
+  background-color: black;
+  width: 100%;
+  margin: 5px;
+}
+
+.top-article-card p {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0;
+  margin: 15px;
+}
+
+#top-title {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.engagement-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 80%;
+  gap: 20px;
+}
+
+.engagement {
+  display: flex;
+  flex-direction: row;
+}
+
+.engagement p {
+  margin: auto;
+}
+
+#engagement {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+#engagement-text {
+  font-style: italic;
+  margin: 3px;
+}
+
 #trending-title {
   font-size: 1.8em;
   font-weight: 700;
@@ -25,15 +74,9 @@ a {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
   justify-content: space-evenly;
-}
-
-.top-articles li {
-  margin: auto;
-  font-size: 0.5em;
+  width: 200%;
+  gap: 1em;
 }
 
 .creation {
@@ -167,9 +210,9 @@ a {
 
 #single-card-body {
   float: left;
-  text-align: justify;
   position: relative;
-  width: 60%;
+  width: 63%;
+  text-align: left;
 }
 
 /* *******  */
@@ -341,9 +384,8 @@ a {
 
 #single-card-body {
   font-size: 1.7em;
-  text-align: justify;
   word-spacing: 3px;
-  line-height: 35px;
+  line-height: 30px;
   margin-left: 15px;
   margin-right: 15px;
   padding-bottom: 1em;

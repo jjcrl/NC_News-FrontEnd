@@ -96,14 +96,14 @@ export const ArticleArtwork = () => {
   ];
   let n = 0;
 
-  for (let i = 0; i < 39; i++) {
+  for (let i = 0; i < 54; i++) {
     const rS = Math.floor(Math.random() * symbols.length);
     arr.push(symbols[rS]);
     const rL = Math.floor(Math.random() * letters.length);
     arr.push(letters[rL]);
   }
 
-  for (let i = 0; i < 77; i++) {
+  for (let i = 0; i < 108; i++) {
     n = Math.floor(Math.random() * 10);
     cellA.push(n);
   }
@@ -115,10 +115,10 @@ export const ArticleArtwork = () => {
           return <span>{n}</span>;
         } else if (cellA[i] < 2) {
           return <span id="void"></span>;
-        } else if (cellA[i] >= 2) {
-          return <span>{n[i]}</span>;
+        } else if (cellA[i] === 2) {
+          return <span>.</span>;
         } else {
-          return <span id="void">.</span>;
+          return <span id="void">{n[i]}</span>;
         }
       })}
     </div>

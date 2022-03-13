@@ -25,7 +25,7 @@ export const TopArticles = (props) => {
             return (
               <li>
                 <Link to={`/articles/${article.article_id}`}>
-                  <ArticleCard top={true} {...article} />
+                  <ArticleCard top={true} article={article} />
                 </Link>
               </li>
             );

@@ -2,17 +2,14 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { fecthAllArticles, fetchAllTopics } from "../utils/api";
-import { countTopics, countTopicVotes } from "../utils/helperFuncs";
 import { ArticleCard } from "./ArticleCard";
 import { Loader } from "./Loader";
 import { TopArticles } from "./TopArticles";
-import { TopicCard } from "./TopicCard";
 
 export const Articles = () => {
   const [articles, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
   const [topics, setTopics] = useState([]);
-
   const { topic } = useParams();
 
   useEffect(() => {
@@ -57,7 +54,7 @@ export const Articles = () => {
                 return (
                   <li key={i}>
                     <Link to={`/articles/${article.article_id}`}>
-                      <ArticleCard {...article} />
+                      <ArticleCard article={article} />
                     </Link>
                   </li>
                 );

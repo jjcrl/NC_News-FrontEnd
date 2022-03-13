@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchAllTopics, fetchArticle } from "../utils/api";
-import { countTopics, countTopicVotes } from "../utils/helperFuncs";
-import { ArticleCard } from "./ArticleCard";
-import { TopicCard } from "./TopicCard";
+import { SingleArticleCard } from "./SingleArticleCard";
 import { Comments } from "./Comments";
 import { Loader } from "./Loader";
 import { Voting } from "./Voting";
@@ -11,27 +9,34 @@ import { ShowWrapper } from "./ShowWrapper";
 import { PostComment } from "./PostComment";
 
 export const SingleArticle = (props) => {
-  const [article, setArticle] = useState([]);
+  const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(true);
   const [newComment, setNewComment] = useState();
+  const [topic, setTopic] = useState();
   const { id } = useParams();
 
   useEffect(() => {
     fetchArticle(id).then((data) => {
       setArticle(data);
     });
+    fetchAllTopics().then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        if (article.topic === data[i].slug) {
+          setTopic(data[i]);
+        }
+      }
+    });
     setLoading(false);
-  }, [id]);
+  }, [id, article.topic]);
 
   if (loading) return <Loader />;
-
   return (
     <div className="single-article">
-      <ArticleCard
-        votes={props.votes}
-        count={props.count[article.topic]}
-        single={true}
-        {...article}
+      <SingleArticleCard
+        topic={topic}
+        article={article}
+        posts={props.posts[article.topic]}
+        totalvotes={props.votes[article.topic]}
       />
       <Voting id={id} votes={article.votes} />
       <ShowWrapper>

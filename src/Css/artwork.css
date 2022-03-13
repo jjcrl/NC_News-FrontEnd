@@ -24,18 +24,18 @@
 
 .gen-grid-v2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .gen-grid-v2 span {
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
-  font-size: 3.5em;
+  font-size: 3.1em;
   color: grey;
   margin: auto;
   padding: 0;
-  opacity: 35%;
+  opacity: 20%;
 }
 
 .gen-grid span {
