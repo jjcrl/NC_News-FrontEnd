@@ -10,15 +10,16 @@ export const SingleArticleCard = (props) => {
         <ArticleArtwork />
       </div>
       <div className="article-heading-container">
-        <p id="single-article-card-topic">#{props.article.topic}</p>
-        <p id="single-title">{props.article.title}</p>
+        <p id="single-article-card-topic">~ {props.article.topic} ~</p>
+        <p id="single-title">{props.article.title}.</p>
+        <div className="creation">
+          <p id="single-author">@{props.article.author}</p>
+          <p id="date">{props.article.created_at}.</p>
+        </div>
       </div>
-      <div className="creation">
-        <p>{props.article.author}</p>
-        <p id="date">{props.article.created_at}</p>
-      </div>
+
       <div className="article-body-container">
-        <p id="single-card-body">{props.article.body}</p>
+        <p id="single-card-body">¶ _{props.article.body}</p>
         <TopicCard
           topic={props.topic}
           count={props.posts}

@@ -3,7 +3,7 @@ export const Gen = () => {
   const cellA = [];
   let n = 0;
 
-  for (let i = 0; i < 117; i++) {
+  for (let i = 0; i < 96; i++) {
     n = Math.floor(Math.random() * 10);
     cellA.push(n);
   }

@@ -4,13 +4,17 @@ const api = axios.create({
   baseURL: "https://j412cff-nc-news.herokuapp.com/api",
 });
 
-export const fecthAllArticles = (topic) => {
-  if (!topic) {
+export const fecthAllArticles = (topic, sort) => {
+  if (!topic && !sort) {
     return api.get("/articles").then((res) => {
       return res.data.articles;
     });
-  } else {
+  } else if (topic) {
     return api.get(`/articles?topic=${topic}`).then((res) => {
+      return res.data.articles;
+    });
+  } else if (sort) {
+    return api.get(`/articles?sort_by=${sort}&order=desc`).then((res) => {
       return res.data.articles;
     });
   }

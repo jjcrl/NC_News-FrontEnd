@@ -10,12 +10,12 @@ export const TopicCard = (props) => {
         <p id="topic-description">{props.topic.description}</p>
         <div className="stats-container">
           <div className="topic-count">
-            <p id="stats">{props.count}</p>
-            <p id="stats-text">Posts</p>
+            <p id="stats">{props.count}k.</p>
+            <p id="stats-text">¶ost's</p>
           </div>
           <div className="topic-votes">
-            <p id="stats">{props.votes}</p>
-            <p id="stats-text">Votes</p>
+            <p id="stats">!{props.votes}</p>
+            <p id="stats-text">Σ</p>
           </div>
           <button>Join the conversation</button>
         </div>

@@ -24,31 +24,28 @@ export const Voting = (props) => {
 
   return (
     <div className={props.comment ? "voting-comment" : "voting"}>
-      <div
-        className={props.comment ? "voting-comment-buttons" : "voting-buttons"}
-      >
-        <button
+      <div className="voting-value">
+        <p>*{votes}</p>
+      </div>
+      <div className={props.comment ? "voting-comment-text" : "voting-text"}>
+        <span
           onClick={() => {
             handleVote(1);
           }}
           disabled={upVoteDisable}
+          id="v-text"
         >
-          <img src="https://img.icons8.com/ios-filled/37/000000/up--v1.png" />{" "}
-        </button>
-
-        <button
-          disabled={downVoteDisable}
+          ++
+        </span>
+        <span
           onClick={() => {
             handleVote(-1);
           }}
+          disabled={downVoteDisable}
+          id="v-text"
         >
-          <img src="https://img.icons8.com/ios-filled/37/000000/down--v1.png" />{" "}
-        </button>
-      </div>
-
-      <div className={props.comment ? "voting-comment-text" : "voting-text"}>
-        <p>{votes}</p>
-        <p id="v-text">votes</p>
+          - -
+        </span>
       </div>
     </div>
   );

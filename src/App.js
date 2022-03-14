@@ -6,7 +6,7 @@ import { Dashboard } from "./components/Dashboard";
 import { Articles } from "./components/Articles";
 import { SingleArticle } from "./components/SingleArticle";
 import { fecthAllArticles } from "./utils/api";
-import { countTopics, countTopicVotes } from "./utils/helperFuncs";
+import { countTopics, countTopicEngagemet } from "./utils/helperFuncs";
 import { Loader } from "./components/Loader";
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       posts: count,
     }));
 
-    const votes = countTopicVotes(articles, "topic");
+    const votes = countTopicEngagemet(articles, "topic");
     setTopicVoteCount((currState) => ({
       ...currState,
       votes: votes,

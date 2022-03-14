@@ -1,26 +1,18 @@
 .nav-container {
-  border: solid 1px black;
-  background-color: black;
+  border: solid 1px #181315;
+  background-color: #181315;
+  opacity: 99%;
+  margin: auto;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
+  gap: 5em;
+  margin: auto;
 }
 
 .nav img {
-  padding: 5px;
+  padding: 8px;
+  opacity: 85%;
 }
-
-/* @media screen and (min-width: 500px) {
-  .nav {
-    flex-direction: column;
-  }
-  .nav img {
-    padding: 30px !important;
-  }
-  .nav-container {
-    position: fixed;
-    height: 100%;
-  }
-} */

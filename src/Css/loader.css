@@ -1,16 +1,14 @@
 .loader {
   margin: auto;
-  padding-left: 8em;
-  padding-top: 10em;
+  width: 100%;
+  height: auto;
 }
 
 .loader p {
-  font-size: 8em;
+  font-size: 5em;
   text-align: center;
   font-weight: bold;
   letter-spacing: 15px;
   font-style: italic;
-  background-color: black;
-  color: white;
-  padding: 20px;
+  color: #412cff;
 }

@@ -17,14 +17,15 @@ export const countTopics = (objectArray, property) => {
   }, {});
 };
 
-export const countTopicVotes = (objectArray, property) => {
+export const countTopicEngagemet = (objectArray, property) => {
   return objectArray.reduce((acc, obj) => {
     const key = obj[property];
     const votes = obj.votes;
+    const comments = Number(obj.comment_count);
     if (!acc[key]) {
       acc[key] = 0;
     }
-    acc[key] += votes;
+    acc[key] += votes + comments;
     return acc;
   }, {});
 };
