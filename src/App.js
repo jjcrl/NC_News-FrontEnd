@@ -12,10 +12,9 @@ import { Loader } from "./components/Loader";
 function App() {
   const [articles, setArticle] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [topicCount, setTopicCount] = useState({ posts: [] });
-
   const [topicVoteCount, setTopicVoteCount] = useState({ votes: [] });
+  const [allPostTotal, setAllPostTotal] = useState();
 
   useEffect(() => {
     fecthAllArticles().then((data) => {
@@ -45,7 +44,7 @@ function App() {
       <div className="App">
         <Navigation />
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/topic/:topic" element={<Articles />} />
           <Route

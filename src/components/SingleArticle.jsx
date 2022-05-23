@@ -13,6 +13,7 @@ export const SingleArticle = (props) => {
   const [loading, setLoading] = useState(true);
   const [newComment, setNewComment] = useState();
   const [topic, setTopic] = useState();
+  const [nTopics, setNTopics] = useState();
   const { id } = useParams();
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export const SingleArticle = (props) => {
       setArticle(data);
     });
     fetchAllTopics().then((data) => {
+      setNTopics(data.length);
       for (let i = 0; i < data.length; i++) {
         if (article.topic === data[i].slug) {
           setTopic(data[i]);
@@ -30,6 +32,11 @@ export const SingleArticle = (props) => {
   }, [id, article.topic]);
 
   if (loading) return <Loader />;
+
+  const engagementTotals = Object.values(props.votes).reduce((p, c) => {
+    return p + c;
+  }, 0);
+
   return (
     <div className="single-article">
       <SingleArticleCard
@@ -37,6 +44,8 @@ export const SingleArticle = (props) => {
         article={article}
         posts={props.posts[article.topic]}
         totalvotes={props.votes[article.topic]}
+        gTotal={engagementTotals}
+        nTopics={nTopics}
       />
       <Voting id={id} votes={article.votes} />
       <ShowWrapper>
@@ -50,5 +59,3 @@ export const SingleArticle = (props) => {
     </div>
   );
 };
-
-// votes={topicVoteCount} count={topicCount}

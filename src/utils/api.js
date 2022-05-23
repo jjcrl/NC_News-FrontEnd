@@ -34,6 +34,9 @@ export const fetchArticle = (id) => {
 
 export const patchVotes = (vote, id) => {
   const body = { inc_votes: vote, username: "butterbridge" };
+
+  console.log(vote);
+
   return api.patch(`/articles/${id}`, body).then((res) => {
     return res.data.article.votes;
   });

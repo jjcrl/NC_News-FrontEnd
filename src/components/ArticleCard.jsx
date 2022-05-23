@@ -7,8 +7,11 @@ export const ArticleCard = (props) => {
 
     return (
       <div className="top-article-card">
-        <p id="topic">#{props.article.topic}</p>
-        <p id="top-title">{props.article.title}</p>
+        <div className="card-info">
+          <p id="topic"># {props.article.topic}</p>
+          <p id="top-title">{props.article.title}.</p>
+        </div>
+
         <div className="engagement-container">
           <div className="engagement">
             <p id="engagement">*{props.article.votes}</p>

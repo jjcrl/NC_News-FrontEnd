@@ -1,51 +1,42 @@
 import { useState } from "react";
 import { patchVotes } from "../utils/api";
 import { useEffect } from "react";
+import { Loader } from "./Loader";
 
 export const Voting = (props) => {
   const [votes, setVotes] = useState();
-  const [upVoteDisable, setUpVoteDisable] = useState(false);
-  const [downVoteDisable, setdownVoteDisable] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setVotes(props.votes);
+    setLoading(false);
   }, [props.votes]);
 
-  const handleVote = (vote) => {
-    if (vote === 1) {
-      setUpVoteDisable(true);
-      setVotes((currVotes) => currVotes + 1);
-    } else if (vote === -1) {
-      setdownVoteDisable(true);
-      setVotes((currVotes) => currVotes - 1);
-    }
-    patchVotes(vote, props.id);
-  };
+  if (loading) return <Loader />;
+
+  function handleVote() {
+    console.log("clicked");
+    setVotes((currVotes) => currVotes + 1);
+    patchVotes(1, props.id);
+    setToggle(true);
+  }
 
   return (
     <div className={props.comment ? "voting-comment" : "voting"}>
       <div className="voting-value">
-        <p>*{votes}</p>
+        <p>{votes}</p>
       </div>
       <div className={props.comment ? "voting-comment-text" : "voting-text"}>
-        <span
+        <button
           onClick={() => {
-            handleVote(1);
+            handleVote();
           }}
-          disabled={upVoteDisable}
           id="v-text"
+          disabled={toggle}
         >
           ++
-        </span>
-        <span
-          onClick={() => {
-            handleVote(-1);
-          }}
-          disabled={downVoteDisable}
-          id="v-text"
-        >
-          - -
-        </span>
+        </button>
       </div>
     </div>
   );

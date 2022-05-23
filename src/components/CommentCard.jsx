@@ -7,11 +7,12 @@ export const CommentCard = (props) => {
   return (
     <div className="comment-card">
       <div className="comment-card-creation">
-        <p id="author">{props.author}</p>
-        <Voting comment={true} votes={props.votes} />
+        <span id="author-dp"></span>
+        <p id="author">@{props.author}</p>
       </div>
 
       <p className="comment-card-body">{props.body}</p>
+      <Voting comment={true} votes={props.votes} />
     </div>
   );
 };

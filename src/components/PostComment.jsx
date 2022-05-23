@@ -43,7 +43,6 @@ export const PostComment = ({ id, setNewComment }) => {
     <div className="comment-form-container">
       <form onSubmit={handleSubmit}>
         <fieldset id="feildset">
-          <legend>comment</legend>
           <input
             id="body"
             type="text"

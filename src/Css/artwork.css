@@ -4,38 +4,41 @@
 
 .gen-grid {
   background-color: white;
-  width: 270px !important;
+  width: 270px;
+  height: 200px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   border: solid 2px white;
   gap: 0;
-  padding: 20px;
+  padding: 15px;
+  margin-top: 25px;
 }
 
 .letters-artwork {
-  position: fixed;
+  /* position: fixed; */
   right: 0;
-  margin-top: 0;
-  margin-right: 1em;
+  margin-right: 3em;
   z-index: 0;
-  padding: 3em;
+  padding: 1em;
 }
 
 .gen-grid-v2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
 }
 
 .gen-grid-v2 span {
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   font-size: 3em;
-  color: #181315;
-  margin: auto;
-  padding: 0;
+  color: #412cff;
   font-style: italic;
+  opacity: 10%;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
 .gen-grid span {
@@ -56,6 +59,6 @@
 }
 
 #cell-3 {
-  background-color: whitesmoke;
-  border: solid 1px whitesmoke;
+  background-color: white;
+  border: solid 1px white;
 }

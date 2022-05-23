@@ -1,8 +1,7 @@
 .nav-container {
-  border: solid 1px #181315;
-  background-color: #181315;
-  opacity: 99%;
-  margin: auto;
+  /* border: solid 1px #080707;
+  background-color: #080707; */
+  width: 100%;
 }
 
 .nav {
@@ -10,9 +9,11 @@
   flex-direction: row;
   gap: 5em;
   margin: auto;
+  padding-top: 15px;
+  padding-left: 15px;
 }
 
 .nav img {
   padding: 8px;
-  opacity: 85%;
+  opacity: 100%;
 }

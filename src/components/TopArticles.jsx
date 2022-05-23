@@ -17,9 +17,8 @@ export const TopArticles = (props) => {
           b.votes + Number(b.comment_count) - a.votes + Number(a.comment_count)
         );
       });
-      const topFive = data.slice(0, 6);
+      const topFive = data.slice(0, 5);
 
-      console.log(topFive);
       const grandtotal = topFive.reduce((c, p) => {
         return c + p.votes + Number(p.comment_count);
       }, 0);
@@ -33,7 +32,6 @@ export const TopArticles = (props) => {
   if (loading) return <Loader />;
   return (
     <>
-      <p id="trending-title">¶‰ ++^¤</p>
       <div className="top-articles">
         <ul>
           {articles.map((article, i) => {
