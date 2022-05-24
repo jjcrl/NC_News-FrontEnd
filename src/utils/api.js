@@ -14,7 +14,7 @@ export const fecthAllArticles = (topic, sort) => {
       return res.data.articles;
     });
   } else if (sort) {
-    return api.get(`/articles?sort_by=${sort}&order=desc`).then((res) => {
+    return api.get(`/articles?sort_by=${sort}&order=asc`).then((res) => {
       return res.data.articles;
     });
   }

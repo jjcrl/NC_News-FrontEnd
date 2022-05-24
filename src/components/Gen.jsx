@@ -1,5 +1,5 @@
 import "../Css/artwork.css";
-export const Gen = () => {
+export const Gen = (props) => {
   const cellA = [];
   let n = 0;
 
@@ -8,7 +8,7 @@ export const Gen = () => {
     cellA.push(n);
   }
   return (
-    <div className="gen-grid">
+    <div className={props.top ? "gen-grid-top" : "gen-grid"}>
       {cellA.map((n, i) => {
         if (n > 5) {
           return <span key={i} id="cell-1"></span>;

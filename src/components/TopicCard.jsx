@@ -16,27 +16,35 @@ export const TopicCard = (props) => {
 
   const points = props.votes / 10;
 
-  return (
-    <div className="single-topic-card">
-      <Link to={`/articles/topic/`}>
-        <p id="topic-title">#{props.topic.slug}</p>
-        <p id="topic-description">{props.topic.description}</p>
-        <div className="stats-container">
-          <div className="stats">
-            <p id="stats">{props.count}k</p>
-            <p id="stats-text">¶osts</p>
+  if (props.main !== true) {
+    return (
+      <div className="single-topic-card">
+        <Link to={`/articles/topic/`}>
+          <p id="topic-title">#{props.topic.slug}</p>
+          <p id="topic-description">{props.topic.description}</p>
+
+          <div className="stats-container">
+            <div className="stats">
+              <p id="stats">{props.count}k</p>
+              <p id="stats-text">¶osts</p>
+            </div>
+            <div className="stats">
+              <p id="stats">{points}k</p>
+              <p id="stats-text">p¤ints</p>
+            </div>
+            <button>Join The Conversation</button>
           </div>
-          <div className="stats">
-            <p id="stats">{points}k</p>
-            <p id="stats-text">p¤ints</p>
-          </div>
-          {/* <div className="stats">
-            <p id="stats">{percent}</p>
-            <p id="stats-text">‰</p>
-          </div> */}
-          <button>Join the conversation</button>
-        </div>
-      </Link>
-    </div>
-  );
+        </Link>
+      </div>
+    );
+  } else {
+    return (
+      <div className="single-topic-card-main">
+        <Link to={`/articles/topic/${props.topic.slug}`}>
+          <p id="topic-title-main">{props.topic.slug}</p>
+        </Link>
+        <p id="topic-description-main">{props.topic.description}</p>
+      </div>
+    );
+  }
 };

@@ -1,26 +1,27 @@
 .all-articles-container {
   display: flex;
   flex-direction: column;
+  margin-left: 12em;
+  margin-right: 12em;
+  margin-top: 8em;
 }
 
 .all-articles {
-  margin: 30px;
-  margin-top: 0;
-  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .all-articles ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  max-height: 6500px;
+  column-count: 2;
+  width: 65%;
 }
 
 .all-articles li {
   padding: 10px;
+  display: inline-block;
 }
 
 .article-card ul {
@@ -33,7 +34,7 @@
   display: flex;
   flex-direction: column;
   background-color: #181315;
-  width: 360px;
+  width: 330px;
 }
 
 #article-card-topic {
@@ -43,7 +44,7 @@
   padding-top: 1em;
   font-weight: bold;
   font-size: 1.3em;
-  color: #412cff;
+  color: white;
   opacity: 50%;
 }
 
@@ -54,7 +55,7 @@
   font-style: italic;
   font-weight: bolder;
   padding-left: 20px;
-  color: #412cff;
+  color: white;
   opacity: 85%;
   padding-bottom: 25px;
 }

@@ -27,7 +27,6 @@ export const PostComment = ({ id, setNewComment }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-
     postComment(comment).then((data) => {
       setNewComment(data);
       setComment((currState) => ({
@@ -42,18 +41,16 @@ export const PostComment = ({ id, setNewComment }) => {
   return (
     <div className="comment-form-container">
       <form onSubmit={handleSubmit}>
-        <fieldset id="feildset">
-          <input
-            id="body"
-            type="text"
-            value={comment.body}
-            onChange={handleComment}
-          />
-          <button type="submit" onClick={handleSubmit}>
-            post
-          </button>
-        </fieldset>
+        <input
+          id="body"
+          type="text"
+          value={comment.body}
+          onChange={handleComment}
+        />
       </form>
+      <button type="submit" onClick={handleSubmit}>
+        Comment
+      </button>
     </div>
   );
 };

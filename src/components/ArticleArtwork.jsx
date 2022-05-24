@@ -8,7 +8,6 @@ export const ArticleArtwork = () => {
     "A",
     "a",
     "B",
-    "b",
     "C",
     "c",
     "D",
@@ -17,7 +16,6 @@ export const ArticleArtwork = () => {
     "e",
     "F",
     "f",
-    "G",
     "g",
     "H",
     "h",
@@ -28,12 +26,9 @@ export const ArticleArtwork = () => {
     "K",
     "k",
     "L",
-    "l",
     "M",
-    "m",
     "N",
     "n",
-    "O",
     "o",
     "P",
     "p",
@@ -46,7 +41,6 @@ export const ArticleArtwork = () => {
     "T",
     "t",
     "U",
-    "u",
     "V",
     "v",
     "W",
@@ -117,33 +111,43 @@ export const ArticleArtwork = () => {
     "“",
     "”",
     "≄",
+    "◘",
   ];
+
   let n = 0;
 
-  for (let i = 0; i < 64; i++) {
+  for (let i = 0; i < 50; i++) {
     const rS = Math.floor(Math.random() * symbols.length);
     arr.push(symbols[rS]);
     const rL = Math.floor(Math.random() * letters.length);
     arr.push(letters[rL]);
   }
 
-  for (let i = 0; i < 128; i++) {
-    n = Math.floor(Math.random() * 10);
+  for (let i = 0; i < 100; i++) {
+    n = Math.floor(Math.random() * 100);
     cellA.push(n);
   }
 
   return (
     <div className="gen-grid-v2">
-      {arr.map((n, i) => {
-        if (cellA[i] >= 5) {
-          return <span>{n}</span>;
-        } else if (cellA[i] <= 2) {
-          return <span id="void"></span>;
-        } else if (cellA[i] === 1) {
-          return <span>.</span>;
+      {arr.map((char, i) => {
+        if (cellA[i] >= 50) {
+          return <span>{arr[cellA[i]]}</span>;
         } else {
-          return <span id="void">{n[i]}</span>;
+          return <span id="large">{arr[cellA[i]]}</span>;
         }
+
+        // if (cellA[i] >= 8) {
+        //   return <span>{char}</span>;
+        // } else if (cellA[i] >= 7) {
+        //   return <span id="large">{char}</span>;
+        // } else if (cellA[i] <= 5) {
+        //   return <span>{char[i]}</span>;
+        // } else if (cellA[i] <= 3) {
+        //   return <span id="large">{char[i]}</span>;
+        // } else {
+        //   return <span>{char}</span>;
+        // }
       })}
     </div>
   );

@@ -8,10 +8,15 @@ import { SortingBar } from "./SortingBar";
 import { TopArticles } from "./TopArticles";
 
 import "../Css/articles.css";
+import "../Css/App.css";
+
+import { TopicCard } from "./TopicCard";
 
 export const Articles = () => {
   const [articles, setArticles] = useState([]);
+
   const [loading, setLoading] = useState(true);
+
   const [topics, setTopics] = useState([]);
   const { topic } = useParams();
 
@@ -32,24 +37,21 @@ export const Articles = () => {
     let sort = e.target.value;
     setLoading(true);
     fecthAllArticles(null, sort).then((data) => {
+      console.log(data);
       setArticles(data);
     });
     setLoading(false);
   };
 
   if (loading) return <Loader />;
-
+  console.log(topics);
   return (
     <>
       <div className="main-container">
         <TopArticles />
-        {/* <div className="topper">
-          <p id="topper-content"> +.. ｡*+¶ ‰ ++^ ¤ ✧･ﾟ : * ✧･ﾟ: *.｡ .:*☆.</p>
-          <p id="topper-content">。°。°。°。°。°。°。°。°。°。°。°</p>
-        </div> */}
-
         <main className="all-articles-container">
           <SortingBar handleSort={handleSort} />
+
           <div className="all-articles">
             <ul>
               {articles.map((article, i) => {
@@ -62,21 +64,20 @@ export const Articles = () => {
                 );
               })}
             </ul>
+
+            <div className="topic-bar">
+              <span id="topper">Current Conversation .º</span>
+              {topics.map((topic, i) => {
+                return (
+                  <Link to={`/articles/topic/${topic.slug}`}>
+                    <TopicCard topic={topic} main={true} number={i + 1} />
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </main>
       </div>
     </>
   );
 };
-
-// <div className="topics-container">
-// <ul>
-//   {topics.map((topic, i) => {
-//     return (
-//       <Link key={i} to={`/articles/topic/${topic.slug}`}>
-//         <li>-{topic.slug}-</li>
-//       </Link>
-//     );
-//   })}{" "}
-// </ul>
-// </div>

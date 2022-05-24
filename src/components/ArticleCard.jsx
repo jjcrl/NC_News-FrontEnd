@@ -8,7 +8,8 @@ export const ArticleCard = (props) => {
     return (
       <div className="top-article-card">
         <div className="card-info">
-          <p id="topic"># {props.article.topic}</p>
+          {/* <p id="position">{props.number}</p> */}
+          <p id="topic">#{props.article.topic}</p>
           <p id="top-title">{props.article.title}.</p>
         </div>
 

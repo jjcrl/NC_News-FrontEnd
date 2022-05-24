@@ -12,7 +12,6 @@ export const Comments = ({ id, newComment }) => {
       data.sort((a, b) => {
         return a.votes - b.votes;
       });
-
       setComments(data.reverse());
       setLoading(false);
     });
