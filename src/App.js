@@ -44,7 +44,7 @@ function App() {
       <div className="App">
         <Navigation />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" render element={<Dashboard />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/topic/:topic" element={<Articles />} />
           <Route
