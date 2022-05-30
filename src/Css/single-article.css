@@ -1,8 +1,122 @@
+@media only screen and (max-width: 390px) {
+  .single-article-card {
+    margin: 0 1em !important;
+  }
+
+  .single-article {
+    margin: 0 1em !important;
+  }
+
+  .letters-artwork {
+    margin: 1em !important;
+    margin-top: 3em !important;
+    width: 100% !important;
+  }
+
+  .article-heading-container {
+    margin-left: 0 !important;
+    margin-top: -28em !important;
+    width: 100% !important;
+  }
+
+  #single-article-card-topic {
+    font-size: 1.5em !important;
+    opacity: 50% !important;
+    color: #181315 !important;
+    margin: 10px !important;
+    margin-top: 1em !important;
+    letter-spacing: 10px !important;
+  }
+
+  #single-title {
+    font-size: 3.5em !important;
+    line-height: 50px !important;
+    word-spacing: 10px !important;
+    letter-spacing: normal !important;
+  }
+
+  .creation {
+    margin: auto !important;
+    margin-top: 1em !important;
+  }
+
+  .creation p {
+    font-size: 1.4em !important;
+  }
+
+  .single-topic-card {
+    display: none !important;
+  }
+
+  .voting {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-right: 1em !important;
+    margin-top: 1em !important;
+  }
+
+  .voting-value p {
+    font-size: 6em !important;
+  }
+
+  .voting-text {
+    font-size: 1em !important;
+  }
+
+  #toggle-comments {
+    font-size: 1.5em;
+    margin: 1em !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .article-body-container {
+    margin-top: 2em !important;
+  }
+
+  #single-card-body {
+    margin: 0 !important;
+    width: 100% !important;
+    font-size: 1.8em !important;
+  }
+
+  .toggle-container {
+    margin-bottom: 6em !important;
+    margin-top: -5px !important;
+  }
+
+  .comment-form-container {
+    margin: 0 !important;
+    margin-bottom: 1em !important;
+  }
+
+  .comment-form-container input {
+    width: 350px !important;
+    margin: auto !important;
+  }
+  .comments-container {
+    margin: auto !important;
+    width: 88% !important;
+  }
+
+  .comment-card-body {
+    font-size: 1.5em !important;
+  }
+
+  .voting-comment {
+    justify-content: flex-end !important;
+  }
+
+  .voting-comment p {
+    font-size: 3em !important;
+  }
+}
+
 .single-article-card {
   display: flex;
   flex-direction: column;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 7em;
+  margin-right: 7em;
   margin-top: 1em;
 }
 
@@ -14,8 +128,9 @@
 .article-heading-container {
   display: flex;
   flex-direction: column;
-  margin-left: 15em;
-  margin-top: -37em;
+  margin-left: 14em;
+  margin-top: -35em;
+  width: 70%;
 }
 
 #single-title {
@@ -23,9 +138,10 @@
   margin: 0;
   font-weight: 700;
   word-spacing: 15px;
-  line-height: 75px;
-  letter-spacing: 5px;
-  font-size: 5em;
+  line-height: 85px;
+  letter-spacing: 8px;
+  font-size: 6em;
+  color: #181315;
 }
 
 #single-author {
@@ -45,7 +161,7 @@
   font-style: italic;
   letter-spacing: 2px;
   color: #181315;
-  opacity: 55%;
+  opacity: 50%;
 }
 
 #single-card-body {
@@ -66,12 +182,11 @@
 
 #single-article-card-topic {
   text-align: right;
-  font-weight: bold;
-  color: #181315;
-  font-size: 2em;
+  font-weight: 800;
+  color: white;
+  font-size: 2.5em;
   font-style: italic;
   letter-spacing: 15px;
-  opacity: 30%;
   margin-right: 2em;
 }
 
@@ -91,29 +206,23 @@
   padding-left: 2em;
 }
 
-.voting-text {
-  font-size: 1.5em;
-}
-
 .comment-card-body {
-  font-size: 1.7em !important;
+  font-size: 1.7em;
 }
 
 .single-topic-card {
   background-color: white;
   display: flex;
   flex-direction: column;
-  border-top: 10px solid #181315;
   width: 22%;
   position: sticky;
-  top: 15px;
+  top: 55px;
   border-radius: 5px;
-  max-height: 520px;
+  max-height: 540px;
   margin-left: 5em;
-  margin-bottom: 5em;
   margin-top: 3em;
   padding-left: 1em;
-  padding-right: ;
+  margin-bottom: 5em;
 }
 
 .single-topic-card button {
@@ -125,43 +234,47 @@
   padding-right: 20px;
   font-weight: 600;
   border-radius: 5px;
-  margin-bottom: 1em;
   margin-top: 1em;
   width: 75%;
   background-color: #181315;
-  color: white;
+  color: whitesmoke;
 }
 
-.single-topic-card p {
-  text-decoration: none;
-  color: black;
-  font-size: 1.5em;
-  opacity: 85%;
+#topic-topper {
+  background-color: #181315;
+  margin-top: -33px;
+  margin-left: -16px;
+  padding-bottom: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-top: 1px;
+  padding-left: 10px;
 }
 
 #topic-title {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: 700;
   text-align: right;
   font-style: italic;
   padding-right: 1em;
+  color: whitesmoke;
+  opacity: 80%;
 }
 
 #topic-description {
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: 500;
   margin-top: -1em;
   text-align: right;
-  padding-right: 1.4em;
-  opacity: 55%;
+  padding-right: 1.3em;
+  opacity: 50%;
+  color: whitesmoke;
 }
 
 .stats-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 2em;
-  padding: 13px;
 }
 
 .stats {
@@ -172,20 +285,29 @@
 
 #stats {
   font-size: 4em;
-  font-style: oblique;
-  font-weight: bolder;
+  font-style: italic;
+  font-weight: 800;
   margin: auto;
   text-align: center;
-  color: black;
+  color: #181315;
+  opacity: 80%;
 }
 
 #stats-text {
   font-size: 2em;
   font-style: italic;
   font-weight: bold;
-  color: black;
-  opacity: 55%;
+  color: #181315;
+  opacity: 50%;
   margin: auto;
+}
+
+.voting-text {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 1em;
 }
 
 .voting {
@@ -199,17 +321,20 @@
   padding-bottom: 1em;
 }
 
-.voting-text button {
-  border: none;
-  font-size: 4.5em;
+#v-text-neg {
+  padding-bottom: 25px;
   font-weight: 600;
-  background: none;
-  margin-top: 20px;
-  opacity: 80%;
+  margin: auto;
 }
 
-.voting-text {
-  font-style: italic;
+.voting-text button {
+  border: none;
+  font-size: 5em;
+  font-weight: 600;
+  background: none;
+  opacity: 80%;
+  color: #181315;
+  margin: auto;
 }
 
 .voting p {
@@ -217,4 +342,6 @@
   font-style: italic;
   font-weight: bolder;
   margin: 0;
+  color: #181315;
+  font-weight: 900;
 }

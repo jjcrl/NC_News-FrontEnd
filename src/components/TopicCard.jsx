@@ -20,8 +20,10 @@ export const TopicCard = (props) => {
     return (
       <div className="single-topic-card">
         <Link to={`/articles/topic/`}>
-          <p id="topic-title">#{props.topic.slug}</p>
-          <p id="topic-description">{props.topic.description}</p>
+          <div id="topic-topper">
+            <p id="topic-title">✧ {props.topic.slug}</p>
+            <p id="topic-description">{props.topic.description}</p>
+          </div>
 
           <div className="stats-container">
             <div className="stats">

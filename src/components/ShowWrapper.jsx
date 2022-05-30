@@ -8,7 +8,7 @@ export const ShowWrapper = ({ children }) => {
   return (
     <div className="toggle-container">
       <button id="toggle-comments" onClick={toggleOpen}>
-        {isOpen ? "hide discussion " : "~ discussion . "}
+        {isOpen ? "~ hide ~" : "~ discussion ~"}
       </button>
       {isOpen && children}
     </div>

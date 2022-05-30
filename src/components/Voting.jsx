@@ -5,7 +5,9 @@ import { Loader } from "./Loader";
 
 export const Voting = (props) => {
   const [votes, setVotes] = useState();
-  const [toggle, setToggle] = useState(false);
+  const [togglePos, setTogglePos] = useState(false);
+  const [toggleNeg, setToggleNeg] = useState(false);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,11 +17,10 @@ export const Voting = (props) => {
 
   if (loading) return <Loader />;
 
-  function handleVote() {
-    console.log("clicked");
-    setVotes((currVotes) => currVotes + 1);
-    patchVotes(1, props.id);
-    setToggle(true);
+  function handleVote(value) {
+    setVotes((currVotes) => currVotes + value);
+    patchVotes(value, props.id);
+    value === 1 ? setTogglePos(true) : setToggleNeg(true);
   }
 
   return (
@@ -30,12 +31,22 @@ export const Voting = (props) => {
       <div className={props.comment ? "voting-comment-text" : "voting-text"}>
         <button
           onClick={() => {
-            handleVote();
+            handleVote(1);
           }}
           id="v-text"
-          disabled={toggle}
+          disabled={togglePos}
+          value="pos"
         >
-          ++
+          +
+        </button>
+        <button
+          onClick={() => {
+            handleVote(-1);
+          }}
+          id="v-text-neg"
+          disabled={toggleNeg}
+        >
+          -
         </button>
       </div>
     </div>

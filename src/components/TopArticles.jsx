@@ -46,28 +46,31 @@ export const TopArticles = (props) => {
     <>
       <p id="topper-title">~ Top Posts ~</p>
       <div className="top-articles">
-        <div className="big-top-article-card">
-          <Gen top={true} />
-          <div className="card-info-big">
-            <p id="topic">#{topArticle.topic}</p>
-            <p id="top-title">{topArticle.title}.</p>
-          </div>
+        <Link to={`/articles/${topArticle.article_id}`}>
+          <div className="big-top-article-card">
+            <Gen top={true} />
+            <div className="card-info-big">
+              <p id="topic">✧ {topArticle.topic}</p>
+              <p id="top-title">{topArticle.title}.</p>
+              <p id="top-article-card-author">@{topArticle.author}</p>
+            </div>
 
-          <div className="engagement-container">
-            <div className="engagement">
-              <p id="engagement">*{topArticle.votes}</p>
-              <p id="engagement-text">++</p>
-            </div>
-            <div className="engagement">
-              <p id="engagement">{topArticle.comment_count}</p>
-              <p id="engagement-text">..^</p>
-            </div>
-            <div className="engagement">
-              <p id="engagement">{score.toFixed(1)}</p>
-              <p id="engagement-text">¤</p>
+            <div className="engagement-container">
+              <div className="engagement">
+                <p id="engagement">{topArticle.votes}</p>
+                <p id="engagement-text">++</p>
+              </div>
+              <div className="engagement">
+                <p id="engagement">{topArticle.comment_count}</p>
+                <p id="engagement-text">..^</p>
+              </div>
+              <div className="engagement">
+                <p id="engagement">{score.toFixed(1)}</p>
+                <p id="engagement-text">¤ </p>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
 
         <ul>
           {articles.map((article, i) => {
