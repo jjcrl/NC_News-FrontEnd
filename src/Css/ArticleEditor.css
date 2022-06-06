@@ -1,0 +1,148 @@
+.article-editor {
+  margin-left: 10em;
+  margin-right: 10em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  align-items: center;
+}
+
+#editor-title {
+  font-size: 3.5em;
+  text-align: right;
+  font-weight: 700;
+  color: #181815;
+  opacity: 50%;
+  letter-spacing: 5px;
+  font-style: italic;
+  width: 30%;
+  margin-right: -10em;
+}
+
+.topic-options {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+#topic-options-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #181815;
+  opacity: 50%;
+  letter-spacing: 2px;
+}
+
+.topic-options button {
+  color: whitesmoke;
+}
+
+#editor-info {
+  font-size: 1.5em;
+  width: 70%;
+}
+
+.content-creator {
+  margin: 2em;
+}
+
+.content-creator textarea {
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  resize: none !important;
+  font-size: 1.5em;
+  padding: 10px;
+  width: 850px;
+  color: #181815;
+}
+
+#new-title {
+  color: #181815;
+  height: 25px;
+  padding-top: 15px;
+}
+
+#new-body {
+  height: 250px;
+  font-size: 1.8em;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+#form-topper {
+  color: whitesmoke;
+  background-color: #181815;
+  font-size: 2em;
+  padding: 5px 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: -5px;
+  z-index: 10;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.content-creator form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-creator button {
+  background-color: #181815;
+  border: none;
+  padding: 10px 25px;
+  color: whitesmoke;
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+
+.finishing-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  background: whitesmoke;
+  justify-content: flex-end;
+  padding: 1em;
+  border: solid 1px whitesmoke;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-top: -5px;
+  width: 95.55%;
+}
+
+.topic-option {
+  display: flex;
+  flex-direction: column;
+  background-color: #181815;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.topic-option button {
+  font-size: 1.8em;
+  font-style: italic;
+}
+
+.topic-option-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 5px 15px;
+}
+
+.topic-option-stats span {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: whitesmoke;
+}
+.topic-option-stats p {
+  margin: 0;
+  font-size: 1.7em;
+  font-weight: 00;
+  font-style: italic;
+  color: whitesmoke;
+}

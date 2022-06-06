@@ -13,13 +13,13 @@
 
 .gen-grid {
   background-color: whitesmoke;
+
   width: 250px;
-  height: 180px;
+  height: 175px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   border: solid 2px whitesmoke;
-  gap: 0;
   padding: 15px;
   margin-top: 25px;
 }
@@ -27,65 +27,101 @@
 .gen-grid-top {
   width: 280px;
   height: 220px;
+  display: grid;
   margin: auto;
   margin-top: 20px;
-  padding: 15px;
+  padding: 20px;
   background-color: whitesmoke;
   border: solid 2px whitesmoke;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0;
 }
 
 .letters-artwork {
   z-index: 0;
-  width: 50%;
-  margin-top: 5em;
-  margin-left: 3em;
 }
 
 .gen-grid-v2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  width: 70%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 30%;
+  padding: 25px;
 }
 
 .gen-grid-v2 span {
-  font-weight: 900;
-  text-align: center;
-  font-size: 2em;
-  font-style: italic;
-  opacity: 5%;
-  padding: 0;
+  font-weight: 700;
+  font-size: 4em;
   color: #181315;
+  margin: auto;
+  opacity: 5%;
 }
 
 #large {
-  font-size: 2.5em;
-  opacity: 10%;
-  padding: 5px;
+  font-size: 4.5em;
+  font-weight: 800;
+  opacity: 15%;
 }
-
-.gen-grid span {
-  color: black;
+#xlarge {
+  font-size: 6em;
   font-weight: 900;
+  opacity: 35%;
 }
 
-#cell-1 {
+/* .fill {
   background-color: #181315;
   border: solid 1px #181315;
-  opacity: 98%;
+  opacity: 99%;
 }
 
-#cell-2 {
-  background-color: #181315;
-  border: solid 1px #181315;
-  opacity: 98%;
-}
-
-#cell-3 {
+.empty {
   background-color: whitesmoke;
   border: solid 1px whitesmoke;
+} */
+
+.cell-1 {
+  background-color: black;
+  border: solid 1px black;
+  opacity: 95%;
+}
+
+.cell-2 {
+  background-color: black;
+  border: solid 1px black;
+  opacity: 95%;
+}
+
+.cell-3 {
+  background-color: whitesmoke;
+  border: solid 1px whitesmoke;
+}
+
+.cell-4 {
+  background-color: #412cff;
+  border: solid 1px #412cff;
+  opacity: 100%;
+}
+
+#cell-45.cell-1,
+#cell-45.cell-2,
+#cell-46.cell-1,
+#cell-46.cell-2,
+#cell-47.cell-2,
+#cell-47.cell-1,
+#cell-57.cell-1,
+#cell-57.cell-2,
+#cell-58.cell-1,
+#cell-58.cell-2,
+#cell-59.cell-2,
+#cell-59.cell-1,
+#cell-71.cell-1,
+#cell-71.cell-2,
+#cell-72.cell-2,
+#cell-72.cell-1,
+#cell-73.cell-1,
+#cell-73.cell-2 {
+  background-color: #412cff;
+  border: 1px solid #412cff;
+  opacity: 100%;
 }

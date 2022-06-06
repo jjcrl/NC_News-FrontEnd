@@ -14,9 +14,7 @@ import { TopicCard } from "./TopicCard";
 
 export const Articles = () => {
   const [articles, setArticles] = useState([]);
-
   const [loading, setLoading] = useState(true);
-
   const [topics, setTopics] = useState([]);
   const { topic } = useParams();
 
@@ -44,7 +42,6 @@ export const Articles = () => {
   };
 
   if (loading) return <Loader />;
-  console.log(topics);
   return (
     <>
       <div className="main-container">

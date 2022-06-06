@@ -8,6 +8,7 @@ import { SingleArticle } from "./components/SingleArticle";
 import { fecthAllArticles } from "./utils/api";
 import { countTopics, countTopicEngagemet } from "./utils/helperFuncs";
 import { Loader } from "./components/Loader";
+import { ArticleEditor } from "./components/ArticleEditor";
 
 function App() {
   const [articles, setArticle] = useState([]);
@@ -46,6 +47,15 @@ function App() {
         <Routes>
           <Route path="/" render element={<Dashboard />} />
           <Route path="/articles" element={<Articles />} />
+          <Route
+            path="/article_editor"
+            element={
+              <ArticleEditor
+                posts={topicCount.posts}
+                votes={topicVoteCount.votes}
+              />
+            }
+          />
           <Route path="/articles/topic/:topic" element={<Articles />} />
           <Route
             path="/articles/:id"

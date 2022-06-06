@@ -46,7 +46,7 @@ export const Voting = (props) => {
           id="v-text-neg"
           disabled={toggleNeg}
         >
-          -
+          −
         </button>
       </div>
     </div>

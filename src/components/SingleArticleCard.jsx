@@ -1,6 +1,8 @@
 import { TopicCard } from "./TopicCard";
 import { ArticleArtwork } from "./ArticleArtwork";
 import { Loader } from "./Loader";
+import { formatDate } from "../utils/helperFuncs";
+
 import "../Css/single-article.css";
 
 export const SingleArticleCard = (props) => {
@@ -20,6 +22,9 @@ export const SingleArticleCard = (props) => {
     slice3 = props.article.body.slice(points[1] + 1, props.article.body.length);
   }
 
+  if (!props.article.created_at) return <Loader />;
+  const creation = formatDate(props.article.created_at);
+
   if (!props.topic) return <Loader />;
   return (
     <div className="single-article-card">
@@ -28,19 +33,26 @@ export const SingleArticleCard = (props) => {
       </div>
       <div className="article-heading-container">
         <p id="single-article-card-topic">~ {props.article.topic} ~</p>
-        <p id="single-title">{props.article.title}</p>
+
+        <p id="single-title">
+          {props.article.title}
+          {props.article.title[props.article.title.length - 1] === "?"
+            ? null
+            : "."}
+        </p>
+
         <div className="creation">
           <p id="single-author">@{props.article.author}</p>
-          <p id="date">{props.article.created_at}.</p>
+          <p id="date">{creation}</p>
         </div>
       </div>
 
       <div className="article-body-container">
-        <span id="single-card-body">
+        <p id="single-card-body">
           {slice1}
-          <span id="single-card-body-bold">"{slice2}"</span>
+          <p id="single-card-body-bold">"{slice2} "</p>
           {slice3}
-        </span>
+        </p>
 
         <TopicCard
           topic={props.topic}

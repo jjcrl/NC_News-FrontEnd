@@ -25,7 +25,7 @@ export const Comments = ({ id, newComment }) => {
         {comments.map((comment) => {
           return (
             <li>
-              <CommentCard {...comment} />
+              <CommentCard length={comments.length} {...comment} />
             </li>
           );
         })}

@@ -8,7 +8,7 @@ export const ArticleCard = (props) => {
     return (
       <div className="top-article-card">
         <div className="card-info">
-          <p id="topic">✧ {props.article.topic}</p>
+          <p id="topic">~ {props.article.topic} ~</p>
           <p id="top-title">{props.article.title}.</p>
           <p id="top4-article-card-author">@{props.article.author}</p>
         </div>
@@ -35,7 +35,7 @@ export const ArticleCard = (props) => {
         <div id="artwork">
           <Gen single={props.single} />
         </div>
-        <p id="article-card-topic">✧ {props.article.topic}</p>
+        <p id="article-card-topic">~ {props.article.topic} ~</p>
         <p id="title">
           {props.article.title}
           {props.article.title[props.article.title.length - 1] === "?"

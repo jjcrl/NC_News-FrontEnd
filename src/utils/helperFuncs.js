@@ -1,9 +1,9 @@
 export const formatDate = (timeString) => {
-  console.log(timeString);
-  const year = timeString.slice(0, 4);
-  const month = timeString.slice(6, 7);
-  const day = timeString.slice(9, 10);
-  return `${day}/${month}/${year}`;
+  const year = timeString.slice(2, 4);
+  const month = timeString.slice(5, 7);
+  const day = timeString.slice(8, 10);
+  const time = timeString.slice(11, 19);
+  return `${day}.${month}.${year} - ${time}`;
 };
 
 export const countTopics = (objectArray, property) => {

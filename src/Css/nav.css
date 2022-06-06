@@ -49,6 +49,10 @@
 } */
 
 .nav img {
-  opacity: 100%;
+  opacity: 25%;
   filter: grayscale();
+}
+
+.nav-item:hover img {
+  opacity: 100%;
 }

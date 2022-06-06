@@ -48,9 +48,10 @@ export const TopArticles = (props) => {
       <div className="top-articles">
         <Link to={`/articles/${topArticle.article_id}`}>
           <div className="big-top-article-card">
+            {/* <p id="hot">⭒✩☆ !! Hot Now !! ☆✩⭒</p> */}
             <Gen top={true} />
             <div className="card-info-big">
-              <p id="topic">✧ {topArticle.topic}</p>
+              <p id="topic">~ {topArticle.topic} ~</p>
               <p id="top-title">{topArticle.title}.</p>
               <p id="top-article-card-author">@{topArticle.author}</p>
             </div>
