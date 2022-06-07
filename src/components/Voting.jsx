@@ -43,7 +43,7 @@ export const Voting = (props) => {
           onClick={() => {
             handleVote(-1);
           }}
-          id="v-text-neg"
+          id="v-text"
           disabled={toggleNeg}
         >
           −

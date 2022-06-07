@@ -140,15 +140,20 @@ export const ArticleArtwork = () => {
 
   let n = 0;
 
-  for (let i = 0; i < 19; i++) {
-    const rS = Math.floor(Math.random() * symbols.length);
-    arr.push(symbols[rS]);
+  for (let i = 0; i < 24; i++) {
+    if (i % 8 === 0) {
+      const rL = Math.floor(Math.random() * letters.length);
+      arr.push(letters[rL]);
+    } else {
+      const rS = Math.floor(Math.random() * symbols.length);
+      arr.push(symbols[rS]);
+    }
   }
 
-  for (let i = 0; i < 5; i++) {
-    const rL = Math.floor(Math.random() * letters.length);
-    arr.push(letters[rL]);
-  }
+  // for (let i = 0; i < 4; i++) {
+  //   const rL = Math.floor(Math.random() * letters.length);
+  //   arr.push(letters[rL]);
+  // }
 
   console.log(arr);
 
@@ -163,13 +168,13 @@ export const ArticleArtwork = () => {
     <div className="gen-grid-v2">
       {arr.map((char, i) => {
         if (cellA[i] <= 3) {
-          return <span>{char}</span>;
+          return <p>{char}</p>;
         } else if (cellA[i] <= 6) {
-          return <span id="large">{char}</span>;
+          return <p id="large">{char}</p>;
         } else if (cellA[i] > 7) {
-          return <span id="xlarge">{char}</span>;
+          return <p id="xlarge">{char}</p>;
         } else {
-          return <span id="empty"></span>;
+          return <p id="empty"></p>;
         }
       })}
     </div>

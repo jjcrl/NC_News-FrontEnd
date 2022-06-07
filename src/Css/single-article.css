@@ -1,47 +1,57 @@
 @media only screen and (max-width: 390px) {
   .single-article-card {
-    margin: 0 1em !important;
+    margin: 0 !important;
   }
 
   .single-article {
-    margin: 0 1em !important;
+    margin: 0 !important;
   }
-
   .letters-artwork {
-    margin: 1em !important;
-    margin-top: 3em !important;
-    width: 100% !important;
+    background-color: #181315;
+    padding-bottom: 3em;
   }
 
   .article-heading-container {
-    margin-left: 0 !important;
-    margin-top: -28em !important;
-    width: 100% !important;
+    margin: 0 !important;
+    background-color: whitesmoke !important;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: solid 5px white;
+    border-bottom: none;
+    margin-top: -4em !important;
+    z-index: 100;
   }
 
   #single-article-card-topic {
-    font-size: 1.5em !important;
-    opacity: 50% !important;
-    color: #181315 !important;
-    margin: 10px !important;
-    margin-top: 1em !important;
-    letter-spacing: 10px !important;
+    display: none;
   }
 
   #single-title {
-    font-size: 3.5em !important;
-    line-height: 50px !important;
-    word-spacing: 10px !important;
-    letter-spacing: normal !important;
-  }
-
-  .creation {
+    font-size: 450% !important;
+    line-height: 8vh !important;
+    letter-spacing: -0.5vw !important;
+    word-spacing: -0.5vw !important;
+    width: auto !important;
+    font-weight: 900 !important;
+    text-align: center !important;
     margin: auto !important;
-    margin-top: 1em !important;
+    padding: 20px 20px;
+    font-variant: small-caps;
+    text-decoration: none !important;
+  }
+  .creation {
+    margin-top: -30px;
+    align-items: center;
   }
 
   .creation p {
-    font-size: 1.4em !important;
+    font-size: 150% !important;
+    font-weight: 700 !important;
+    text-align: right !important;
+  }
+
+  #date {
+    font-size: 110% !important;
   }
 
   .single-topic-card {
@@ -49,18 +59,25 @@
   }
 
   .voting {
-    margin: 0 !important;
     padding: 0 !important;
-    margin-right: 1em !important;
-    margin-top: 1em !important;
+    align-items: flex-start !important;
+    margin-top: -30px !important;
+    margin-left: 2em;
   }
 
   .voting-value p {
-    font-size: 6em !important;
+    font-size: 6.5em !important;
   }
 
   .voting-text {
-    font-size: 1em !important;
+    font-size: 0.7em !important;
+    gap: 0 !important;
+    margin: auto !important;
+  }
+
+  .voting-text button {
+    opacity: 90% !important;
+    font-weight: 900 !important;
   }
 
   #toggle-comments {
@@ -71,13 +88,33 @@
   }
 
   .article-body-container {
-    margin-top: 2em !important;
+    margin-top: 5vh !important;
+    background-color: whitesmoke !important;
+    flex-direction: column !important;
   }
 
   #single-card-body {
     margin: 0 !important;
-    width: 100% !important;
-    font-size: 1.8em !important;
+    width: 85% !important;
+    font-size: 1.5em !important;
+    text-align: left !important;
+    font-weight: 500 !important;
+    line-height: 3.3vh !important;
+    border-top: none !important;
+    text-indent: 1em;
+    hyphens: auto;
+  }
+
+  #single-card-body-bold {
+    text-align: center !important;
+    font-size: 3em !important;
+    text-indent: 0 !important;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 700 !important;
+    letter-spacing: -2px !important;
+    line-height: 50px !important;
+    font-variant: small-caps;
   }
 
   .toggle-container {

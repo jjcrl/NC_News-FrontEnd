@@ -35,14 +35,16 @@ export const ArticleCard = (props) => {
         <div id="artwork">
           <Gen single={props.single} />
         </div>
-        <p id="article-card-topic">~ {props.article.topic} ~</p>
-        <p id="title">
-          {props.article.title}
-          {props.article.title[props.article.title.length - 1] === "?"
-            ? null
-            : "."}
-        </p>
-        <p id="article-card-author">@{props.article.author}</p>
+        <div className="card-info-main">
+          <p id="article-card-topic">~ {props.article.topic} ~</p>
+          <p id="title">
+            {props.article.title}
+            {props.article.title[props.article.title.length - 1] === "?"
+              ? null
+              : "."}
+          </p>
+          <p id="article-card-author">@{props.article.author}</p>
+        </div>
       </div>
     );
   }

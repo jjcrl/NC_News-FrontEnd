@@ -4,16 +4,38 @@
 
 @media only screen and (max-width: 390px) {
   .gen-grid-top {
-    display: none !important;
+    width: 31vw !important;
+    height: 10vh !important;
+    margin: auto !important;
+    padding: 5px !important;
   }
   .gen-grid-v2 {
-    font-size: 10px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 20px 0;
+    background-color: #181315 !important;
+  }
+
+  .gen-grid-v2 p {
+    margin: auto !important;
+    color: whitesmoke !important;
+    padding: 0 !important;
+    font-size: 1em !important;
+    opacity: 20% !important;
+  }
+
+  #large {
+    font-size: 2em !important;
+    opacity: 35% !important;
+  }
+  #xlarge {
+    font-size: 3em !important;
+    opacity: 55% !important;
   }
 }
 
 .gen-grid {
   background-color: whitesmoke;
-
   width: 250px;
   height: 175px;
   display: grid;
@@ -50,7 +72,7 @@
   padding: 25px;
 }
 
-.gen-grid-v2 span {
+.gen-grid-v2 p {
   font-weight: 700;
   font-size: 4em;
   color: #181315;
@@ -61,12 +83,12 @@
 #large {
   font-size: 4.5em;
   font-weight: 800;
-  opacity: 15%;
+  opacity: 10%;
 }
 #xlarge {
   font-size: 6em;
   font-weight: 900;
-  opacity: 35%;
+  opacity: 30%;
 }
 
 /* .fill {

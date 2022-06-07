@@ -25,6 +25,8 @@ export const SingleArticleCard = (props) => {
   if (!props.article.created_at) return <Loader />;
   const creation = formatDate(props.article.created_at);
 
+  let test = props.article.title.replaceAll("and", "&");
+
   if (!props.topic) return <Loader />;
   return (
     <div className="single-article-card">
@@ -34,11 +36,9 @@ export const SingleArticleCard = (props) => {
       <div className="article-heading-container">
         <p id="single-article-card-topic">~ {props.article.topic} ~</p>
 
-        <p id="single-title">
-          {props.article.title}
-          {props.article.title[props.article.title.length - 1] === "?"
-            ? null
-            : "."}
+        <p id="single-title" lang="en">
+          {test}
+          {test[test - 1] === "?" ? null : "."}
         </p>
 
         <div className="creation">
@@ -47,12 +47,11 @@ export const SingleArticleCard = (props) => {
         </div>
       </div>
 
-      <div className="article-body-container">
-        <p id="single-card-body">
-          {slice1}
-          <p id="single-card-body-bold">"{slice2} "</p>
-          {slice3}
-        </p>
+      <div className="article-body-container" lang="en">
+        <p id="single-card-body">{slice1}</p>
+
+        <p id="single-card-body-bold">"{slice2} "</p>
+        <p id="single-card-body">{slice3}</p>
 
         <TopicCard
           topic={props.topic}

@@ -3,18 +3,6 @@
     margin: auto !important;
   }
 
-  #title {
-    font-size: 1.6em !important;
-  }
-
-  #article-card-topic {
-    font-size: 1.3em !important;
-  }
-
-  #article-card-author {
-    font-size: 1.3em !important;
-  }
-
   .all-articles ul {
     column-count: 1 !important;
     margin: auto !important;

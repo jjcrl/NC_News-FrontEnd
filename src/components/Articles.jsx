@@ -35,7 +35,6 @@ export const Articles = () => {
     let sort = e.target.value;
     setLoading(true);
     fecthAllArticles(null, sort).then((data) => {
-      console.log(data);
       setArticles(data);
     });
     setLoading(false);
