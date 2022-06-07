@@ -1,19 +1,31 @@
 @media only screen and (max-width: 390px) {
   .nav-container {
-    width: 100vw !important;
-    background-color: whitesmoke;
-    margin: 0 !important;
-    z-index: 100;
-    border-top: solid 5px #181815;
+    z-index: 200;
     bottom: 0;
-    padding-bottom: 5px;
+    right: 0;
+    position: fixed;
+    padding: 20px 10px;
+    margin: auto !important;
   }
 
   .nav {
     flex-direction: row !important;
-    justify-content: center;
-    gap: 5em !important;
-    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    gap: 0 !important;
+    filter: drop-shadow(0 0 10px #0003);
+  }
+
+  .nav-item {
+    padding: 15px 20px;
+  }
+
+  .nav img {
+    width: 40px !important;
+  }
+
+  .nav-item:hover img {
+    opacity: 25% !important;
   }
 }
 
