@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArticleCard } from "./ArticleCard";
 import { useState } from "react";
 import { Loader } from "./Loader";
-import { fecthAllArticles } from "../utils/api";
+import { fecthAllArticles, fetchArticle } from "../utils/api";
 import { Gen } from "./Gen";
 
 export const TopArticles = (props) => {
@@ -11,6 +11,7 @@ export const TopArticles = (props) => {
   const [topArticle, setTopArticle] = useState([]);
   const [loading, setLoading] = useState(true);
   const [gTotal, setGTotal] = useState();
+  const [snippet, setSnippet] = useState();
 
   useEffect(() => {
     fecthAllArticles().then((data) => {
@@ -20,22 +21,27 @@ export const TopArticles = (props) => {
         );
       });
       const topFive = data.slice(0, 5);
-
       const grandtotal = topFive.reduce((c, p) => {
         return c + p.votes + Number(p.comment_count);
       }, 0);
-
       setGTotal(grandtotal);
-
       const top = topFive[0];
-
       const topFour = topFive.slice(1, 5);
-
       setArticles(topFour);
       setTopArticle(top);
-      setLoading(false);
     });
   }, []);
+
+  useEffect(() => {
+    const id = topArticle.article_id;
+    fetchArticle(id).then((article) => {
+      const first = article.body.indexOf(".");
+      const snippet = article.body.substring(0, first / 2);
+      console.log(snippet);
+      setSnippet(snippet);
+      setLoading(false);
+    });
+  }, [topArticle]);
 
   if (loading) return <Loader />;
 
@@ -44,7 +50,7 @@ export const TopArticles = (props) => {
 
   return (
     <>
-      <p id="topper-title">~ Top Posts ~</p>
+      <p id="topper-title">Top Posts</p>
       <div className="top-articles">
         <Link to={`/articles/${topArticle.article_id}`}>
           <div className="big-top-article-card">
@@ -52,6 +58,9 @@ export const TopArticles = (props) => {
             <div className="card-info-big">
               <p id="topic">~ {topArticle.topic} ~</p>
               <p id="top-title">{topArticle.title}.</p>
+              <div>
+                <p id="top-snippet">"{snippet}""...</p>
+              </div>
               <p id="top-article-card-author">@{topArticle.author}</p>
             </div>
 
@@ -62,11 +71,11 @@ export const TopArticles = (props) => {
               </div>
               <div className="engagement">
                 <p id="engagement">{topArticle.comment_count}</p>
-                <p id="engagement-text">..^</p>
+                <p id="engagement-text">≡</p>
               </div>
-              <div className="engagement">
-                <p id="engagement">{score.toFixed(1)}</p>
-                <p id="engagement-text">¤ </p>
+              <div className="engagement-score">
+                <p id="engagement">{score.toFixed(0)}</p>
+                <p id="engagement-text">!!</p>
               </div>
             </div>
           </div>

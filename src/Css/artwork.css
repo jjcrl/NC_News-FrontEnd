@@ -4,8 +4,9 @@
 
 @media only screen and (max-width: 390px) {
   .gen-grid-top {
-    width: 31vw !important;
-    height: 10vh !important;
+    display: none !important;
+    width: 30vw !important;
+    height: 12vh !important;
     margin: auto !important;
     padding: 5px !important;
   }
@@ -31,6 +32,12 @@
   #xlarge {
     font-size: 3em !important;
     opacity: 55% !important;
+  }
+  .gen-grid {
+    width: 35vw !important;
+    height: 30vw !important;
+    padding: 5px !important;
+    margin-top: 15px !important;
   }
 }
 

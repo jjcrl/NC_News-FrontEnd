@@ -4,17 +4,26 @@
   }
 
   .all-articles ul {
-    column-count: 1 !important;
+    width: 95vw !important;
     margin: auto !important;
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em !important;
+  }
+
+  .all-articles li {
+    padding: 0 !important;
+    margin-bottom: 20px;
   }
 
   .all-articles {
     flex-direction: column-reverse !important;
+  }
+
+  .article-card {
+    max-width: 45vw;
+    font-size: 10px !important;
+  }
+
+  #article-card-topic {
+    display: none;
   }
 }
 
@@ -73,13 +82,15 @@
 #title {
   margin: 0;
   padding: 10px;
-  font-size: 2em;
+  font-size: 2.3em;
   font-style: italic;
   font-weight: bolder;
-  padding-left: 20px;
+  padding-left: 15px;
   color: whitesmoke;
   opacity: 80%;
   padding-bottom: 25px;
+  line-height: 25px;
+  letter-spacing: -1px;
 }
 
 #article-card-author {

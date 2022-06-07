@@ -13,18 +13,18 @@ export const ArticleCard = (props) => {
           <p id="top4-article-card-author">@{props.article.author}</p>
         </div>
 
-        <div className="engagement-container">
+        <div className="small-engagement-container">
           <div className="engagement">
-            <p id="engagement">*{props.article.votes}</p>
+            <p id="engagement">{props.article.votes}</p>
             <p id="engagement-text">++</p>
           </div>
           <div className="engagement">
             <p id="engagement">{props.article.comment_count}</p>
-            <p id="engagement-text">..^</p>
+            <p id="engagement-text">≡</p>
           </div>
-          <div className="engagement">
-            <p id="engagement">{score.toFixed(1)}</p>
-            <p id="engagement-text">¤</p>
+          <div className="engagement-score">
+            <p id="engagement">{score.toFixed(0)}</p>
+            <p id="engagement-text">!!</p>
           </div>
         </div>
       </div>
