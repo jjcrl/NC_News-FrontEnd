@@ -5,43 +5,66 @@ import { useState } from "react";
 import { Loader } from "./Loader";
 import { fecthAllArticles, fetchArticle } from "../utils/api";
 import { Gen } from "./Gen";
+import "../Css/TopArticles.css";
 
-export const TopArticles = (props) => {
+export const TopArticles = () => {
   const [articles, setArticles] = useState([]);
   const [topArticle, setTopArticle] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [gTotal, setGTotal] = useState();
-  const [snippet, setSnippet] = useState();
+  const [loading, setLoading] = useState(true);
+
+  const fetchSnippet = async (id) => {
+    const article = await fetchArticle(id);
+    const body = article.body;
+    const index = body.indexOf(". ");
+    const sentence = body.substring(0, index + 1);
+    return sentence.length > 150
+      ? sentence.substring(0, sentence.length / 2)
+      : sentence;
+  };
+
+  const addSnippet = async (item, id) => {
+    const snippet = await fetchSnippet(id);
+    item.snippet = snippet;
+    return item;
+  };
 
   useEffect(() => {
-    fecthAllArticles().then((data) => {
-      data.sort((a, b) => {
-        return (
-          b.votes + Number(b.comment_count) - a.votes + Number(a.comment_count)
+    fecthAllArticles()
+      .then((articles) => {
+        const sorted = articles.sort((a, b) => {
+          return (
+            b.votes +
+            Number(b.comment_count) -
+            a.votes +
+            Number(a.comment_count)
+          );
+        });
+        return sorted;
+      })
+      .then((sorted) => {
+        const topArticles = sorted.slice(0, 5);
+        return topArticles;
+      })
+      .then((topArticles) => {
+        const addedSnippets = topArticles.map((article) =>
+          addSnippet(article, article.article_id)
         );
-      });
-      const topFive = data.slice(0, 5);
-      const grandtotal = topFive.reduce((c, p) => {
-        return c + p.votes + Number(p.comment_count);
-      }, 0);
-      setGTotal(grandtotal);
-      const top = topFive[0];
-      const topFour = topFive.slice(1, 5);
-      setArticles(topFour);
-      setTopArticle(top);
-    });
+        return Promise.all(addedSnippets);
+      })
+      .then((preppedArticles) => {
+        const [top] = preppedArticles;
+        const topFour = preppedArticles.slice(1, 5);
+        const grandtotal = preppedArticles.reduce((c, p) => {
+          return c + p.votes + Number(p.comment_count);
+        }, 0);
+        setTopArticle(top);
+        setArticles(topFour);
+        setGTotal(grandtotal);
+      })
+      .catch((err) => console.log(err));
+    setLoading(false);
   }, []);
-
-  useEffect(() => {
-    const id = topArticle.article_id;
-    fetchArticle(id).then((article) => {
-      const first = article.body.indexOf(".");
-      const snippet = article.body.substring(0, first / 2);
-      console.log(snippet);
-      setSnippet(snippet);
-      setLoading(false);
-    });
-  }, [topArticle]);
 
   if (loading) return <Loader />;
 
@@ -52,46 +75,39 @@ export const TopArticles = (props) => {
     <>
       <p id="topper-title">Top Posts</p>
       <div className="top-articles">
-        <Link to={`/articles/${topArticle.article_id}`}>
-          <div className="big-top-article-card">
-            <Gen top={true} />
+        <div className="big-top-article-card">
+          <Gen top={true} />
+          <Link to={`/articles/${topArticle.article_id}`}>
             <div className="card-info-big">
-              <p id="topic">~ {topArticle.topic} ~</p>
+              <p id="topic">{topArticle.topic}</p>
               <p id="top-title">{topArticle.title}.</p>
-              <div>
-                <p id="top-snippet">"{snippet}""...</p>
-              </div>
               <p id="top-article-card-author">@{topArticle.author}</p>
+              <p id="top-snippet">"{topArticle.snippet}" ...</p>
             </div>
+          </Link>
 
-            <div className="engagement-container">
-              <div className="engagement">
-                <p id="engagement">{topArticle.votes}</p>
-                <p id="engagement-text">++</p>
-              </div>
-              <div className="engagement">
-                <p id="engagement">{topArticle.comment_count}</p>
-                <p id="engagement-text">≡</p>
-              </div>
-              <div className="engagement-score">
-                <p id="engagement">{score.toFixed(0)}</p>
-                <p id="engagement-text">!!</p>
-              </div>
+          <div className="engagement-container">
+            <div className="engagement">
+              <p id="engagement">{topArticle.votes}</p>
+              <p id="engagement-text">++</p>
+            </div>
+            <div className="engagement">
+              <p id="engagement">{topArticle.comment_count}</p>
+              <p id="engagement-text">≡</p>
+            </div>
+            <div className="engagement-score">
+              <p id="engagement-score">{score.toFixed(0)}</p>
+              <p id="engagement-text-score">!!</p>
             </div>
           </div>
-        </Link>
+        </div>
 
         <ul>
           {articles.map((article, i) => {
             return (
               <li key={i}>
                 <Link to={`/articles/${article.article_id}`}>
-                  <ArticleCard
-                    gTotal={gTotal}
-                    number={i + 2}
-                    top={true}
-                    article={article}
-                  />
+                  <ArticleCard gTotal={gTotal} top={true} article={article} />
                 </Link>
               </li>
             );
