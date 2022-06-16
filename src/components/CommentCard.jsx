@@ -31,8 +31,10 @@ export const CommentCard = (props) => {
         <p id="author">@{props.author}</p>
       </div>
 
-      <p className="comment-card-body">{props.body}</p>
-      <Voting comment={true} votes={props.votes} />
+      <div className="comment-card-main">
+        <p className="comment-card-body">{props.body}</p>
+        <Voting comment={true} votes={props.votes} />
+      </div>
     </div>
   );
 };

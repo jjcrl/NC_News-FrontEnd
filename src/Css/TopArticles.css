@@ -1,38 +1,44 @@
 #topper-title {
   letter-spacing: 20px;
   color: #181315;
-  font-size: 5vw;
+  font-size: 3vw;
   font-style: italic;
-  opacity: 50%;
-  text-align: center;
-}
-
-.top-article-card {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.06));
-  background-color: white;
-  border-radius: 1%;
-  display: flex;
-  padding: 1vw;
-}
-
-.card-info {
-  padding: 0.5vw;
-  font-size: 1vw;
-}
-
-.top-articles {
-  display: flex;
-  flex-direction: row;
-  margin: 0 10vw;
-  align-items: center;
+  opacity: 10%;
+  text-align: right;
+  padding-right: 5vw;
+  font-weight: 800;
+  margin-bottom: -3vh;
 }
 
 .big-top-article-card {
   margin: 1vw;
   background: #181315;
   padding: 1vw;
-  border-radius: 1%;
-  width: min-content;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.06));
+  width: max-content;
+}
+
+.top-article-card {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.06));
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  align-items: stretch;
+  width: fit-content;
+}
+
+.top-line {
+  display: flex;
+}
+
+.top-articles {
+  display: flex;
+  flex-direction: row;
+  margin: 10vh 5vw;
+  align-items: flex-start;
 }
 
 .card-info-big {
@@ -41,70 +47,93 @@
   color: whitesmoke;
 }
 
+.card-info {
+  font-size: 1vw;
+  color: #181315;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 #top-snippet {
-  font-size: 1.5vw;
-  font-weight: 600;
-  font-style: italic;
-  opacity: 70%;
+  font-size: 2.2vw;
+  font-weight: 700;
+  opacity: 50%;
   margin: auto;
+  line-height: 4vh;
+  letter-spacing: -0.1px;
+  padding: 0.5vh 0;
+  font-style: italic;
+  hyphens: auto;
+}
+
+#xs-top-snippet {
+  font-size: 3.5vh;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  font-style: italic;
+  margin: auto;
+  word-spacing: -1px;
+  line-height: 3.2vh;
+  color: #181315;
 }
 
 .top-articles ul {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   list-style: none;
-  margin: 1vw;
   padding: 0;
+  margin: 1vw 0;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr;
+  gap: 20px; */
+  column-count: 2;
+  column-gap: 1vw;
 }
 
 .top-articles li {
   padding: 0;
-  margin: 1vh;
+  margin: 0;
+  margin-bottom: 1vw;
+  break-inside: avoid;
 }
 
 #top-title {
   font-size: 1.8em;
   font-weight: 700;
   opacity: 80%;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  padding-left: 10px;
+  margin: auto;
   text-decoration: underline;
+}
+
+#top4-title {
+  font-size: 1.5vw;
+  font-weight: 600;
+  opacity: 70%;
+  text-decoration: underline;
+  margin: 0;
+  color: #181315;
 }
 
 #top-article-card-author {
   color: whitesmoke;
-  font-weight: 700;
-  opacity: 10%;
-  text-align: left;
+  font-weight: 600;
+  opacity: 50%;
   font-size: 1.5vw;
-  margin: 0.5vh;
-  padding: 0.5vh;
-}
-
-#topper-title {
-  font-size: 1.5em !important;
-  margin: 0 !important;
-  padding: 20px;
-  letter-spacing: 10px !important;
-  opacity: 10% !important;
+  margin: 5px 0;
+  font-style: italic;
 }
 
 #topic {
   display: none;
 }
 
-#top-title {
-  font-size: 1.5em !important;
-  margin: auto !important;
-  padding: 0 !important;
-}
-
 #top4-article-card-author {
-  padding-top: 5px;
-  margin-bottom: -10px !important;
-  display: none;
+  color: #181315;
+  margin: 0;
+  font-size: 1.1vw;
+  font-style: italic;
+  font-weight: 600;
+  opacity: 50%;
+  padding: 5px 0;
 }
 
 .engagement {
@@ -119,8 +148,26 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   box-sizing: border-box;
-  margin: 1vw auto;
+  height: 25vh;
   width: min-content;
+  margin: auto;
+}
+
+.top4-engagement-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.top4-engagement {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.top4-engagement-score {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
 }
 
 .engagement-score {
@@ -174,29 +221,34 @@
 
 #xs-engagement {
   font-style: italic;
-  font-size: 3vw;
+  font-size: 4.5vw;
   margin: auto;
-  font-weight: 600;
+  font-weight: 800;
   color: #181315;
 }
+
 #xs-engagement-text {
   font-style: italic;
-  font-size: 1vw;
+  font-size: 3.5vw;
   margin: auto;
   font-weight: 900;
-  color: #181315;
-  margin-top: -1px;
+  color: #fe4b72;
+  margin-top: -1vh;
+  margin-left: -1.2vw;
 }
 
 #xs-engagement-score {
   font-style: italic;
-  font-size: 7vw;
-  margin: auto;
-  font-weight: 700;
+  font-size: 5.5vw;
+  margin: 0 auto;
+  font-weight: 800;
+  color: #412cff;
 }
+
 #xs-engagement-text-score {
   font-style: italic;
-  font-size: 5vw;
+  font-size: 4.5vw;
   font-weight: 900;
-  margin: auto;
+  color: #fe4b72;
+  margin: -2vh auto 0 -1.5vw;
 }

@@ -12,7 +12,7 @@ import "../Css/App.css";
 
 import { TopicCard } from "./TopicCard";
 
-export const Articles = () => {
+export const Articles = ({ posts, votes }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [topics, setTopics] = useState([]);
@@ -62,12 +62,15 @@ export const Articles = () => {
             </ul>
 
             <div className="topic-bar">
-              <span id="topper">Current Conversation .º</span>
+              {/* <p id="topic-bar-title">Currrent Conversations</p> */}
               {topics.map((topic, i) => {
                 return (
-                  <Link to={`/articles/topic/${topic.slug}`}>
-                    <TopicCard topic={topic} main={true} number={i + 1} />
-                  </Link>
+                  <TopicCard
+                    posts={posts[topic.slug]}
+                    votes={votes[topic.slug]}
+                    topic={topic}
+                    main={true}
+                  />
                 );
               })}
             </div>

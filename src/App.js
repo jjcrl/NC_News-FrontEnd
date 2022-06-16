@@ -15,7 +15,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [topicCount, setTopicCount] = useState({ posts: [] });
   const [topicVoteCount, setTopicVoteCount] = useState({ votes: [] });
-  const [allPostTotal, setAllPostTotal] = useState();
 
   useEffect(() => {
     fecthAllArticles().then((data) => {
@@ -46,7 +45,12 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" render element={<Dashboard />} />
-          <Route path="/articles" element={<Articles />} />
+          <Route
+            path="/articles"
+            element={
+              <Articles posts={topicCount.posts} votes={topicVoteCount.votes} />
+            }
+          />
           <Route
             path="/article_editor"
             element={
@@ -56,7 +60,12 @@ function App() {
               />
             }
           />
-          <Route path="/articles/topic/:topic" element={<Articles />} />
+          <Route
+            path="/articles/topic/:topic"
+            element={
+              <Articles posts={topicCount.posts} votes={topicVoteCount.votes} />
+            }
+          />
           <Route
             path="/articles/:id"
             element={

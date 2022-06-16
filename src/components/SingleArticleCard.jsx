@@ -34,7 +34,7 @@ export const SingleArticleCard = (props) => {
         <ArticleArtwork />
       </div>
       <div className="article-heading-container">
-        <p id="single-article-card-topic">~ {props.article.topic} ~</p>
+        <p id="single-article-card-topic">~{props.article.topic}~</p>
 
         <p id="single-title" lang="en">
           {test}
@@ -46,13 +46,12 @@ export const SingleArticleCard = (props) => {
           <p id="date">{creation}</p>
         </div>
       </div>
-
-      <div className="article-body-container" lang="en">
-        <p id="single-card-body">{slice1}</p>
-
-        <p id="single-card-body-bold">"{slice2} "</p>
-        <p id="single-card-body">{slice3}</p>
-
+      <div className="main-body-container">
+        <div className="article-body-container" lang="en">
+          <p id="single-card-body">{slice1}</p>
+          <p id="single-card-body-bold">"{slice2} "</p>
+          <p id="single-card-body">{slice3}</p>
+        </div>{" "}
         <TopicCard
           topic={props.topic}
           count={props.posts}

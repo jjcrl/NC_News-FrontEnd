@@ -140,7 +140,7 @@ export const ArticleArtwork = () => {
 
   let n = 0;
 
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < 50; i++) {
     if (i % 8 === 0) {
       const rL = Math.floor(Math.random() * letters.length);
       arr.push(letters[rL]);
@@ -157,7 +157,7 @@ export const ArticleArtwork = () => {
 
   console.log(arr);
 
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < 50; i++) {
     n = Math.floor(Math.random() * 10);
     cellA.push(n);
   }

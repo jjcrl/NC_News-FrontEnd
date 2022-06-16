@@ -4,57 +4,49 @@ const api = axios.create({
   baseURL: "https://j412cff-nc-news.herokuapp.com/api",
 });
 
-export const fecthAllArticles = (topic, sort) => {
+export const fecthAllArticles = async (topic, sort) => {
   if (!topic && !sort) {
-    return api.get("/articles").then((res) => {
-      return res.data.articles;
-    });
+    const res = await api.get("/articles");
+    return res.data.articles;
   } else if (topic) {
-    return api.get(`/articles?topic=${topic}`).then((res) => {
-      return res.data.articles;
-    });
+    const res_1 = await api.get(`/articles?topic=${topic}`);
+    return res_1.data.articles;
   } else if (sort) {
-    return api.get(`/articles?sort_by=${sort}&order=asc`).then((res) => {
-      return res.data.articles;
-    });
+    const res_2 = await api.get(`/articles?sort_by=${sort}&order=asc`);
+    return res_2.data.articles;
   }
 };
 
-export const fetchAllTopics = () => {
-  return api.get("/topics").then((res) => {
-    return res.data.topics;
-  });
+export const fetchAllTopics = async () => {
+  const res = await api.get("/topics");
+  return res.data.topics;
 };
 
-export const fetchArticle = (id) => {
-  return api.get(`articles/${id}`).then((res) => {
-    return res.data.article;
-  });
+export const fetchArticle = async (id) => {
+  const res = await api.get(`articles/${id}`);
+  return res.data.article;
 };
 
-export const patchVotes = (vote, id) => {
+export const patchVotes = async (vote, id) => {
   const body = { inc_votes: vote, username: "butterbridge" };
 
   console.log(vote);
 
-  return api.patch(`/articles/${id}`, body).then((res) => {
-    return res.data.article.votes;
-  });
+  const res = await api.patch(`/articles/${id}`, body);
+  return res.data.article.votes;
 };
 
-export const fetchArticleComments = (id) => {
-  return api.get(`/articles/${id}/comments`).then((res) => {
-    return res.data.comments;
-  });
+export const fetchArticleComments = async (id) => {
+  const res = await api.get(`/articles/${id}/comments`);
+  return res.data.comments;
 };
 
-export const postComment = (comment) => {
+export const postComment = async (comment) => {
   console.log(comment);
   const body = {
     username: comment.user,
     body: comment.body,
   };
-  return api.post(`/articles/${comment.id}/comments`, body).then((res) => {
-    return res.data.comment;
-  });
+  const res = await api.post(`/articles/${comment.id}/comments`, body);
+  return res.data.comment;
 };

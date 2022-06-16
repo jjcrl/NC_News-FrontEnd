@@ -16,7 +16,7 @@ export const TopicCard = (props) => {
 
   const points = props.votes / 10;
 
-  if (props.main !== true) {
+  if (!props.main) {
     return (
       <div className="single-topic-card">
         <Link to={`/articles/topic/`}>
@@ -41,12 +41,24 @@ export const TopicCard = (props) => {
     );
   } else {
     return (
-      <div className="single-topic-card-main">
-        <Link to={`/articles/topic/${props.topic.slug}`}>
-          <p id="topic-title-main">{props.topic.slug}</p>
-        </Link>
-        <p id="topic-description-main">{props.topic.description}</p>
-      </div>
+      <Link to={`/articles/topic/${props.topic.slug}`}>
+        <div className="single-topic-card-main">
+          <div className="xs-topic-card-info-container">
+            <p id="topic-title-main">#{props.topic.slug}</p>
+          </div>
+
+          <div className="xs-stats-container">
+            <div className="xs-stats">
+              <p id="xs-stats">{props.posts}</p>
+              <p id="xs-stats-text">¶ost's</p>
+            </div>
+            <div className="xs-stats">
+              <p id="xs-stats">{props.votes}</p>
+              <p id="xs-stats-text">p¤int's</p>
+            </div>
+          </div>
+        </div>
+      </Link>
     );
   }
 };

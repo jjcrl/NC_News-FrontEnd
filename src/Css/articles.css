@@ -1,55 +1,28 @@
-@media only screen and (max-width: 390px) {
-  .all-articles-container {
-    margin: auto !important;
-  }
-
-  .all-articles ul {
-    width: 95vw !important;
-    margin: auto !important;
-  }
-
-  .all-articles li {
-    padding: 0 !important;
-    margin-bottom: 20px;
-  }
-
-  .all-articles {
-    flex-direction: column-reverse !important;
-  }
-
-  .article-card {
-    max-width: 45vw;
-    font-size: 10px !important;
-  }
-
-  #article-card-topic {
-    display: none;
-  }
-}
-
 .all-articles-container {
   display: flex;
   flex-direction: column;
-  margin-left: 12em;
-  margin-right: 12em;
-  margin-top: 8em;
+  margin: 0 3vw;
 }
 
 .all-articles {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .all-articles ul {
   list-style: none;
-  margin: 0;
+  margin: 0 1vw;
   padding: 0;
-  column-count: 2;
-  width: 65%;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: max-content;
+  justify-content: center; */
+  column-count: 3;
 }
 
 .all-articles li {
-  padding: 10px;
+  padding: 0.5vw 0;
   display: inline-block;
 }
 
@@ -63,45 +36,42 @@
   display: flex;
   flex-direction: column;
   background-color: #181315;
-  width: 330px;
-  border-radius: 5px;
+  width: min-content;
+  border-radius: 10px;
+}
+
+.card-info-main {
+  margin: 0 1.5vw;
+  margin-bottom: 3vh;
 }
 
 #article-card-topic {
-  text-align: left;
-  margin: 0;
-  padding-left: 1em;
-  padding-top: 1em;
-  font-weight: bold;
-  font-size: 1.5em;
+  margin: auto;
   color: whitesmoke;
+  font-size: 1.5vw;
+  letter-spacing: 3px;
+  font-weight: 700;
   opacity: 50%;
+  text-align: left;
   font-style: italic;
 }
 
 #title {
-  margin: 0;
-  padding: 10px;
-  font-size: 2.3em;
-  font-style: italic;
-  font-weight: bolder;
-  padding-left: 15px;
+  margin: auto;
+  font-size: 2.1vw;
+  font-weight: 700;
   color: whitesmoke;
+  letter-spacing: -0.1px;
+  text-decoration: underline;
   opacity: 80%;
-  padding-bottom: 25px;
-  line-height: 25px;
-  letter-spacing: -1px;
 }
 
 #article-card-author {
   color: whitesmoke;
-  font-weight: 700;
-  opacity: 20%;
-  margin: 0;
-  padding-bottom: 1em;
-  padding-right: 1em;
-  text-align: right;
-  margin-top: -15px;
-  font-size: 1.6em;
+  font-weight: 600;
+  opacity: 50%;
+  margin: 10px 0;
+  font-size: 1.5vw;
+  text-align: left;
   font-style: italic;
 }

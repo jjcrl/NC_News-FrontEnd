@@ -23,10 +23,10 @@ export const TopArticles = () => {
       : sentence;
   };
 
-  const addSnippet = async (item, id) => {
+  const addSnippet = async (article, id) => {
     const snippet = await fetchSnippet(id);
-    item.snippet = snippet;
-    return item;
+    article.snippet = snippet;
+    return article;
   };
 
   useEffect(() => {
@@ -47,19 +47,19 @@ export const TopArticles = () => {
         return topArticles;
       })
       .then((topArticles) => {
-        const addedSnippets = topArticles.map((article) =>
+        const articlesWsnippets = topArticles.map((article) =>
           addSnippet(article, article.article_id)
         );
-        return Promise.all(addedSnippets);
+        return Promise.all(articlesWsnippets);
       })
       .then((preppedArticles) => {
         const [top] = preppedArticles;
+        setTopArticle(top);
         const topFour = preppedArticles.slice(1, 5);
+        setArticles(topFour);
         const grandtotal = preppedArticles.reduce((c, p) => {
           return c + p.votes + Number(p.comment_count);
         }, 0);
-        setTopArticle(top);
-        setArticles(topFour);
         setGTotal(grandtotal);
       })
       .catch((err) => console.log(err));
@@ -76,7 +76,7 @@ export const TopArticles = () => {
       <p id="topper-title">Top Posts</p>
       <div className="top-articles">
         <div className="big-top-article-card">
-          <Gen top={true} />
+          {/* <Gen top={true} /> */}
           <Link to={`/articles/${topArticle.article_id}`}>
             <div className="card-info-big">
               <p id="topic">{topArticle.topic}</p>
@@ -97,7 +97,7 @@ export const TopArticles = () => {
             </div>
             <div className="engagement-score">
               <p id="engagement-score">{score.toFixed(0)}</p>
-              <p id="engagement-text-score">!!</p>
+              <p id="engagement-text-score">¤</p>
             </div>
           </div>
         </div>
@@ -106,9 +106,7 @@ export const TopArticles = () => {
           {articles.map((article, i) => {
             return (
               <li key={i}>
-                <Link to={`/articles/${article.article_id}`}>
-                  <ArticleCard gTotal={gTotal} top={true} article={article} />
-                </Link>
+                <ArticleCard gTotal={gTotal} top={true} article={article} />
               </li>
             );
           })}

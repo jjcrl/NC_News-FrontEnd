@@ -152,79 +152,79 @@
 .single-article-card {
   display: flex;
   flex-direction: column;
-  margin-left: 7em;
-  margin-right: 7em;
-  margin-top: 1em;
-}
-
-.single-article {
-  display: flex;
-  flex-direction: column;
 }
 
 .article-heading-container {
   display: flex;
   flex-direction: column;
-  margin-top: -45em;
-  margin-left: 22em;
+  background-color: whitesmoke;
+  border-top-left-radius: 10vw;
+  border-top-right-radius: 10vw;
+  z-index: 100;
+  margin-top: -20vh;
 }
 
 #single-title {
-  text-align: right;
-  margin: auto;
+  font-size: 5.5vw;
   font-weight: 800;
-  line-height: 90px;
-  letter-spacing: 10px;
-  font-size: 5em;
-  color: #181315;
-  z-index: 100;
+  text-align: center;
+  margin: auto;
+  width: 70%;
   font-style: italic;
-  text-decoration: underline;
-  width: 90%;
-  margin-right: -10px;
+  font-variant: small-caps;
+  margin-top: 15vh;
 }
 
 #single-author {
-  text-decoration: underline;
+  margin: auto;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2.8vw;
 }
 
 .creation {
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
+  margin-bottom: 15vh;
+  margin-top: 2vh;
+  gap: 1vh;
+  font-variant: small-caps;
 }
 
 .creation p {
-  text-align: right;
-  font-size: 2em;
-  margin: 0;
+  text-align: center;
+  font-size: 2vw;
+  margin: auto;
   font-weight: 600;
-  font-style: italic;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #181315;
   opacity: 30%;
+  font-weight: 700;
 }
 
 #single-card-body {
-  width: 70%;
-  margin-top: 2.5em;
-  padding: 1em;
-  border-top: 5px solid #181315;
-  background-color: rgba(245, 245, 245, 0.495);
   color: #181315;
   font-weight: 600;
-  font-size: 2.3em;
-  letter-spacing: 0.8px;
-  word-spacing: 2.5px;
+  font-size: 2.8vw;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
   text-align: left;
+  margin: 0 1vw;
+  line-height: 5vh;
 }
 
 #single-card-body-bold {
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 3.2vw;
   font-style: italic;
-  line-height: 42px;
-  letter-spacing: 2px;
+  line-height: 5.5vh;
+  letter-spacing: 1px;
+  word-spacing: -3px;
+  margin: 4vh;
+  text-align: center;
+  border-left: solid 5px #181315;
+  border-right: solid 5px #181315;
+  padding: 2vw;
 }
 
 #single-article-card-topic {
@@ -234,18 +234,25 @@
   font-style: italic;
   letter-spacing: 25px;
   opacity: 7%;
+  display: none;
 }
 
 .single-article {
-  margin-left: 3em;
-  margin-right: 3em;
+  display: flex;
+  flex-direction: column;
 }
 
 .article-body-container {
   display: flex;
+  flex-direction: column;
+  margin: 0 3vw;
+  width: fit-content;
+}
+
+.main-body-container {
+  display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-top: 5em;
+  margin: 0 5vw;
 }
 
 #single-article-card-topic {
@@ -347,11 +354,9 @@
 }
 
 .voting-text {
-  font-size: 1.5em;
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  margin-left: 1em;
+  margin-top: -15vh;
 }
 
 .voting {
@@ -360,8 +365,8 @@
   padding-right: 5em;
   justify-content: flex-end;
   width: auto;
-  margin-top: -3em;
-  margin-right: 8em;
+  margin-top: -1em;
+  margin-right: 5em;
   padding-bottom: 1em;
 }
 
@@ -373,19 +378,20 @@
 
 .voting-text button {
   border: none;
-  font-size: 5em;
-  font-weight: 600;
+  font-size: 10vw;
+  font-weight: 800;
   background: none;
-  opacity: 80%;
-  color: #181315;
   margin: auto;
+  color: #fe4b72;
 }
 
 .voting p {
-  font-size: 14em;
+  font-size: 15vw;
   font-style: italic;
-  font-weight: bolder;
+  font-weight: 900;
   margin: 0;
   color: #181315;
   font-weight: 900;
+  letter-spacing: -2px;
+  color: #412cff;
 }
