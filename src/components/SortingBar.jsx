@@ -3,22 +3,25 @@ export const SortingBar = ({ handleSort }) => {
     <div className="sorting-bar">
       <div className="sorter">
         <button value="votes" onClick={handleSort}>
-          Popular
+          Top!
         </button>
       </div>
+
       <div className="sorter">
         <button value="created_at" onClick={handleSort}>
-          New
+          Fresh
         </button>
       </div>
+
       <div className="sorter">
-        <button onClick={handleSort} value="author">
-          Author
+        <button value="created_at" onClick={handleSort}>
+          Author A-Z
         </button>
       </div>
+
       <div className="sorter">
-        <button onClick={handleSort} value="title">
-          Title
+        <button value="created_at" onClick={handleSort}>
+          Title A-Z
         </button>
       </div>
     </div>

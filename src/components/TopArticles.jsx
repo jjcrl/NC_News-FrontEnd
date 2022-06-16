@@ -18,8 +18,8 @@ export const TopArticles = () => {
     const body = article.body;
     const index = body.indexOf(". ");
     const sentence = body.substring(0, index + 1);
-    return sentence.length > 150
-      ? sentence.substring(0, sentence.length / 2)
+    return sentence.length > 100
+      ? sentence.substring(0, sentence.length / 3)
       : sentence;
   };
 

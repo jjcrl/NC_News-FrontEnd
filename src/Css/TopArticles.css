@@ -254,8 +254,7 @@
 
 @media only screen and (max-width: 390px) {
   .top-articles {
-    margin: 2.5vw;
-    gap: 1vw;
+    gap: 2vw;
   }
 
   .top-articles ul {
@@ -284,7 +283,7 @@
   }
 
   #top-snippet {
-    font-size: 4.4vw;
+    font-size: 4.6vw;
     line-height: 4.6vw;
   }
 
@@ -296,26 +295,28 @@
 
   .top-article-card {
     min-width: min-content;
-    padding: 2vw;
+    padding: 2.3vw;
   }
 
   .big-top-article-card {
-    width: max-content;
-    padding: 10px;
+    width: fit-content;
+    padding: 15px;
   }
 
   #top4-title {
-    font-size: 3.1vw;
+    font-size: 3.5vw;
     padding-bottom: 5px;
+    line-height: 14px;
   }
+
   #top4-article-card-author {
     font-size: 2vw;
     display: none;
   }
 
   #xs-top-snippet {
-    font-size: 3.8vw;
-    line-height: 3.5vw;
+    font-size: 4.3vw;
+    line-height: 4vw;
   }
 
   #engagement {
