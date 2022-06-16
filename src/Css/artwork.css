@@ -5,7 +5,7 @@
 .gen-grid {
   background-color: whitesmoke;
   width: 20vw;
-  height: 24vh;
+  height: 15vw;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -86,4 +86,15 @@
   background-color: #412cff;
   border: 1px solid #412cff;
   opacity: 100%;
+}
+
+@media only screen and (max-width: 390px) {
+  .gen-grid {
+    width: 30vw;
+    height: 25vw;
+    margin: 3vw;
+    margin-right: 1.5vw;
+    border: none;
+    border-radius: 3px;
+  }
 }

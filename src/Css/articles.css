@@ -42,7 +42,7 @@
 
 .card-info-main {
   margin: 0 1.5vw;
-  margin-bottom: 3vh;
+  margin-bottom: 1vw;
 }
 
 #article-card-topic {
@@ -74,4 +74,43 @@
   font-size: 1.5vw;
   text-align: left;
   font-style: italic;
+}
+
+@media only screen and (max-width: 390px) {
+  .all-articles ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 2vw;
+  }
+
+  .all-articles {
+    flex-direction: column-reverse;
+  }
+
+  .article-card {
+    flex-direction: row;
+    width: fit-content;
+  }
+
+  .card-info-main {
+    margin: 3vw 1.5vw;
+  }
+
+  #article-card-topic {
+    font-size: 3.5vw;
+    text-align: justify;
+  }
+
+  #title {
+    font-size: 4.5vw;
+    margin: auto;
+    line-height: 5.1vw;
+    text-decoration: none;
+  }
+
+  #article-card-author {
+    font-size: 3.5vw;
+    margin: 1vw;
+  }
 }
