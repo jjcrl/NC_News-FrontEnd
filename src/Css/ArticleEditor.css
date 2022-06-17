@@ -1,148 +1,151 @@
 .article-editor {
-  margin-left: 10em;
-  margin-right: 10em;
+  margin-left: 3vw;
+  margin-right: 3vw;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
   align-items: center;
+  height: 100vh;
 }
 
 #editor-title {
-  font-size: 3.5em;
+  font-size: 5vw;
   text-align: right;
   font-weight: 700;
   color: #181815;
-  opacity: 50%;
   letter-spacing: 5px;
   font-style: italic;
-  width: 30%;
-  margin-right: -10em;
+}
+
+#creator-info {
+  font-size: 4.5vw;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 15px;
+  word-spacing: -1px;
+  padding-bottom: 10px;
+
+  border-bottom: solid 5px rgba(255, 255, 255, 0.23);
 }
 
 .topic-options {
   display: flex;
   flex-direction: row;
-  gap: 1em;
-}
-
-#topic-options-title {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #181815;
-  opacity: 50%;
-  letter-spacing: 2px;
+  justify-content: space-around;
+  border-bottom: solid 5px rgba(255, 255, 255, 0.23);
+  padding-bottom: 10px;
 }
 
 .topic-options button {
-  color: whitesmoke;
-}
-
-#editor-info {
-  font-size: 1.5em;
-  width: 70%;
-}
-
-.content-creator {
-  margin: 2em;
-}
-
-.content-creator textarea {
-  height: 50px;
-  border: none;
-  border-radius: 5px;
-  background-color: whitesmoke;
-  resize: none !important;
-  font-size: 1.5em;
-  padding: 10px;
-  width: 850px;
   color: #181815;
-}
-
-#new-title {
-  color: #181815;
-  height: 25px;
-  padding-top: 15px;
-}
-
-#new-body {
-  height: 250px;
-  font-size: 1.8em;
-  padding-top: 15px;
-  padding-left: 15px;
-}
-
-#form-topper {
-  color: whitesmoke;
-  background-color: #181815;
-  font-size: 2em;
-  padding: 5px 15px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  margin-bottom: -5px;
-  z-index: 10;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.content-creator form {
-  display: flex;
-  flex-direction: column;
-}
-
-.content-creator button {
-  background-color: #181815;
+  font-size: 5vw;
+  font-weight: 700;
+  font-style: italic;
+  background-color: white;
   border: none;
-  padding: 10px 25px;
-  color: whitesmoke;
-  font-weight: 600;
-  border-radius: 5px;
-  font-size: 1.5em;
-}
-
-.finishing-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  background: whitesmoke;
-  justify-content: flex-end;
-  padding: 1em;
-  border: solid 1px whitesmoke;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  margin-top: -5px;
-  width: 95.55%;
+  border-bottom: solid 2px whitesmoke;
+  margin-bottom: 5px;
 }
 
 .topic-option {
   display: flex;
   flex-direction: column;
-  background-color: #181815;
+  background-color: white;
+  padding: 5px 10px;
   border-radius: 5px;
-  padding-bottom: 10px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.06));
 }
 
-.topic-option button {
-  font-size: 1.8em;
-  font-style: italic;
+.topic-option-active {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.06));
+  border: solid 2px olive;
 }
 
 .topic-option-stats {
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  padding: 5px 15px;
 }
 
-.topic-option-stats span {
-  margin: 0;
-  font-size: 1.8em;
-  font-weight: 600;
-  color: whitesmoke;
-}
 .topic-option-stats p {
   margin: 0;
-  font-size: 1.7em;
-  font-weight: 00;
   font-style: italic;
+}
+
+#stat {
+  font-size: 5vw;
+  font-weight: 600;
+  color: #412cff;
+}
+
+#stat-symbol {
+  font-size: 4vw;
+  color: #fe4b72;
+  font-weight: 600;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+
+.creator-stat-container {
+  display: inline-flex;
+}
+
+.content-creator textarea {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  resize: none !important;
+  padding: 10px;
+  font-size: 1.5em;
+  font-family: system-ui;
+  font-weight: 600;
+  color: #181815c7;
+}
+
+#new-title {
+  height: 3.5vh;
+}
+
+#v-new-title {
+  border: solid 2px olive;
+}
+
+#new-body {
+  min-height: 30vh;
+  overflow: hidden;
+}
+
+#v-new-body {
+  border: solid 2px olive;
+}
+
+.content-creator form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5vh;
+  padding: 5px;
+}
+
+.finishing-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.finishing-buttons button {
+  background-color: #181815;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5em;
+  padding: 8px 20px;
   color: whitesmoke;
+  font-weight: 600;
+  font-style: italic;
+  opacity: 90%;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.06));
 }

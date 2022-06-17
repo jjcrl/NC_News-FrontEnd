@@ -6,6 +6,9 @@ import { Loader } from "./Loader";
 export const ArticleEditor = (props) => {
   const [topics, setTopics] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [chosenTopic, setChosenTopic] = useState("");
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
 
   useEffect(() => {
     fetchAllTopics().then((data) => {
@@ -14,51 +17,80 @@ export const ArticleEditor = (props) => {
     setLoading(false);
   }, []);
 
-  function topicSelect(e) {
+  const topicSelect = (e) => {
     console.log(e.target.value);
-  }
+    setChosenTopic(e.target.value);
+  };
+
+  const validateTitle = (e) => {
+    if (e.target.value.length > 10) {
+      setTitle(e.target.value);
+    }
+  };
+
+  const validateBody = (e) => {
+    if (e.target.value.length > 100) {
+      setBody(e.target.value);
+    }
+  };
 
   if (loading) return <Loader />;
 
   console.log(props);
   return (
     <div className="article-editor">
-      <p id="editor-title">~ Content Creator ~</p>
-      <p id="editor-info">
-        this is how you use ther editor , topics can be selcted or you can
-        screate your own , you are currently logged in as guest and once you are
-        ready to post you will be taken to your new artiflcle.
-      </p>
+      <p id="editor-title">Create new Post</p>
+
       <div className="content-creator">
-        <p id="topic-options-title">Current Topics</p>
+        <p id="creator-info" style={{ textAlign: "center" }}>
+          Your post will need to belong to a group of other convesations. Join
+          one of make your own (Coming Soon).
+        </p>
+
         <div className="topic-options">
           {topics.map((topic, i) => (
-            <div className="topic-option" key={`topic-${topic.slug}`}>
-              <button onClick={topicSelect} value={topic.slug}>
-                {topic.slug}
-              </button>
-              <div className="topic-option-stats">
-                <span>
-                  {props.votes[topic.slug]}.{i * i + 1}
-                </span>
-                <p>p¤ints</p>
-              </div>
-              <div className="topic-option-stats">
-                <span>{props.posts[topic.slug] + i * i + 1}k</span>
-                <p>¶osts</p>
+            <div
+              onClick={topicSelect}
+              className={
+                chosenTopic === topic.slug
+                  ? "topic-option-active"
+                  : "topic-option"
+              }
+              key={`topic-${topic.slug}`}
+            >
+              <button value={topic.slug}>{topic.slug}</button>
+              <div className="creator-stat-container">
+                <div className="topic-option-stats">
+                  <p id="stat">{props.votes[topic.slug]}</p>
+                  <p id="stat-symbol">¤</p>
+                </div>
+
+                <div className="topic-option-stats">
+                  <p id="stat">{props.posts[topic.slug]}k</p>
+                  <p id="stat-symbol">¶</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
-        <form>
-          <p id="form-topper">Title</p>
-          <textarea id="new-title" rows={1} />
 
-          <p id="form-topper">Body</p>
-          <textarea id="new-body" />
+        <form>
+          <textarea
+            id={title ? "v-new-title" : "new-title"}
+            rows={1}
+            defaultValue={"Title"}
+            contentEditable={false}
+            onChange={validateTitle}
+          />
+
+          <textarea
+            id={body ? "v-new-body" : "new-body"}
+            defaultValue={"¶..."}
+            onChange={validateBody}
+          />
           <div className="finishing-buttons">
             <button>Draft</button>
-            <button id="post">Post !</button>
+            <button id="post">Post</button>
           </div>
         </form>
       </div>
