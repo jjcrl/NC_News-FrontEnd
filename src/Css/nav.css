@@ -3,7 +3,7 @@
   bottom: 0;
   right: 0;
   position: fixed;
-  padding: 7vw 4vh;
+  padding: 3vw 7vh;
   margin: auto;
 }
 
@@ -22,11 +22,46 @@
 }
 
 .nav img {
-  width: 9vw;
+  width: 3vw;
   filter: grayscale();
   padding: 1.5vh 1.5vh;
 }
 
 .nav-item:hover img {
   opacity: 25%;
+}
+
+@media only screen and (max-width: 390px) {
+  .nav-container {
+    z-index: 200;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    padding: 7vw 4vh;
+    margin: auto;
+  }
+
+  .nav {
+    flex-direction: row;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    gap: 0;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.157));
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .nav-item {
+    padding: 0.1vh;
+  }
+
+  .nav img {
+    width: 9vw;
+    filter: grayscale();
+    padding: 1.5vh 1.5vh;
+  }
+
+  .nav-item:hover img {
+    opacity: 25%;
+  }
 }

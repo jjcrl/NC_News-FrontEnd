@@ -9,6 +9,8 @@ import { fecthAllArticles } from "./utils/api";
 import { countTopics, countTopicEngagemet } from "./utils/helperFuncs";
 import { Loader } from "./components/Loader";
 import { ArticleEditor } from "./components/ArticleEditor";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [articles, setArticle] = useState([]);
@@ -42,6 +44,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        {/* <Header /> */}
         <Navigation />
         <Routes>
           <Route path="/" render element={<Dashboard />} />
@@ -76,6 +79,7 @@ function App() {
             }
           />
         </Routes>
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );
