@@ -162,7 +162,7 @@ a {
   display: flex;
   flex-direction: row;
   margin-right: auto;
-  gap: 2vw;
+  gap: 1vw;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -170,12 +170,14 @@ a {
   margin-right: auto;
   margin-top: 2vw;
   margin-bottom: 1vw;
+  border-top: solid 1px white;
+  padding-top: 3vw;
 }
 
 .sorter button {
   background-color: white;
   font-weight: 700;
-  font-size: 4.3vw;
+  font-size: 4.1vw;
   border: solid 1px #18131513;
   color: #181315;
   opacity: 80%;
