@@ -247,7 +247,7 @@
 
 @media only screen and (max-width: 390px) {
   .article-heading-container {
-    margin-top: -55vw;
+    margin-top: -50vw;
   }
 
   .main-body-container {
@@ -259,7 +259,7 @@
     margin: auto;
     font-size: 13vw;
     line-height: 12vw;
-    padding-top: 25vw;
+    margin-top: 30vw;
   }
 
   #single-author {
