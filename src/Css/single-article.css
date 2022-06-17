@@ -259,7 +259,7 @@
     margin: auto;
     font-size: 13vw;
     line-height: 12vw;
-    padding-top: 15vw;
+    padding-top: 25vw;
   }
 
   #single-author {
@@ -349,5 +349,6 @@
     padding: 5vw 1vw;
     font-size: 1.5em;
     text-align: center;
+    color: #181315 !important;
   }
 }
