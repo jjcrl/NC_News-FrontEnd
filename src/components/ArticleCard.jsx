@@ -130,7 +130,7 @@ export const ArticleCard = (props) => {
 
     let string = "";
 
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 5; i++) {
       const random = Math.floor(Math.random() * symbols.length);
       string += symbols[random];
     }

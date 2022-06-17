@@ -82,6 +82,7 @@
     flex-direction: column;
     margin: 0;
     gap: 2vw;
+    align-items: center;
   }
 
   .all-articles {
