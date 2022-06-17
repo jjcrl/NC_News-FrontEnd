@@ -297,7 +297,7 @@
 
   .top-article-card {
     min-width: fit-content;
-    padding: 1.8vw;
+    padding: 2vw;
     border-radius: 5px;
   }
 
@@ -320,8 +320,8 @@
   }
 
   #xs-top-snippet {
-    font-size: 4vw;
-    line-height: 3.4vw;
+    font-size: 3.2vw;
+    line-height: 3.1vw;
     font-weight: 400 !important;
   }
 
