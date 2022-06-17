@@ -91,6 +91,7 @@
   .article-card {
     flex-direction: row;
     width: fit-content;
+    border-radius: 5px;
   }
 
   .card-info-main {
@@ -98,19 +99,27 @@
   }
 
   #article-card-topic {
-    font-size: 3.5vw;
+    font-size: 3.7vw;
     text-align: justify;
+    font-weight: 600;
+    opacity: 20% !important;
+    color: whitesmoke;
+    padding-bottom: 1px;
   }
 
   #title {
-    font-size: 4.5vw;
+    font-size: 4.7vw;
     margin: auto;
-    line-height: 5.1vw;
+    line-height: 5vw;
     text-decoration: none;
+    font-weight: 600;
+    opacity: 90%;
   }
 
   #article-card-author {
     font-size: 3.5vw;
-    margin: 1vw;
+    margin: 0;
+    margin-top: 2px;
+    font-weight: 600;
   }
 }

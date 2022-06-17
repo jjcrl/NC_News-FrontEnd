@@ -19,7 +19,7 @@ export const TopArticles = () => {
     const index = body.indexOf(". ");
     const sentence = body.substring(0, index + 1);
     return sentence.length > 100
-      ? sentence.substring(0, sentence.length / 3)
+      ? sentence.substring(0, sentence.length / 2.5)
       : sentence;
   };
 
@@ -82,7 +82,7 @@ export const TopArticles = () => {
               <p id="topic">{topArticle.topic}</p>
               <p id="top-title">{topArticle.title}.</p>
               <p id="top-article-card-author">@{topArticle.author}</p>
-              <p id="top-snippet">"{topArticle.snippet}" ...</p>
+              <p id="top-snippet">"{topArticle.snippet}..."</p>
             </div>
           </Link>
 

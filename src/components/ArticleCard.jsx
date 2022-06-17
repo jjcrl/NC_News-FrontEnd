@@ -15,7 +15,7 @@ export const ArticleCard = (props) => {
           <Link to={`/articles/${props.article.article_id}`}>
             <p id="top4-title">{props.article.title}.</p>
             <p id="top4-article-card-author">@{props.article.author}</p>
-            <p id="xs-top-snippet">"{props.article.snippet}"...</p>
+            <p id="xs-top-snippet">"{props.article.snippet}..."</p>
           </Link>
         </div>
 

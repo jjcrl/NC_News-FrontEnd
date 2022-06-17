@@ -17,6 +17,7 @@ export const Articles = ({ posts, votes }) => {
   const [loading, setLoading] = useState(true);
   const [topics, setTopics] = useState([]);
   const { topic } = useParams();
+  const [chosen, setChosen] = useState();
 
   useEffect(() => {
     fecthAllArticles(topic, null).then((data) => {
@@ -37,6 +38,7 @@ export const Articles = ({ posts, votes }) => {
     fecthAllArticles(null, sort).then((data) => {
       setArticles(data);
     });
+    setChosen(true);
     setLoading(false);
   };
 
@@ -46,7 +48,7 @@ export const Articles = ({ posts, votes }) => {
       <div className="main-container">
         <TopArticles />
         <main className="all-articles-container">
-          <SortingBar handleSort={handleSort} />
+          <SortingBar handleSort={handleSort} chosen={chosen} />
 
           <div className="all-articles">
             <ul>

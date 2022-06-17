@@ -3,7 +3,7 @@
   bottom: 0;
   right: 0;
   position: fixed;
-  padding: 3vw 3vh;
+  padding: 7vw 4vh;
   margin: auto;
 }
 
@@ -12,7 +12,7 @@
   background-color: whitesmoke;
   border-radius: 50px;
   gap: 0;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.385));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.157));
   padding-left: 2vw;
   padding-right: 2vw;
 }
@@ -24,7 +24,7 @@
 .nav img {
   width: 9vw;
   filter: grayscale();
-  padding: 2vh 2vh;
+  padding: 1.5vh 1.5vh;
 }
 
 .nav-item:hover img {

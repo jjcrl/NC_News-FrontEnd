@@ -1,9 +1,11 @@
+import { useState } from "react";
+
 export const SortingBar = ({ handleSort }) => {
   return (
     <div className="sorting-bar">
       <div className="sorter">
         <button value="votes" onClick={handleSort}>
-          Top!
+          Hot
         </button>
       </div>
 

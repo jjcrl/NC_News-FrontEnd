@@ -257,7 +257,7 @@
   #single-title {
     padding: auto;
     margin: auto;
-    font-size: 15vw;
+    font-size: 13vw;
     line-height: 12vw;
     padding-top: 15vw;
   }
@@ -270,6 +270,7 @@
   }
 
   .single-topic-card {
+    display: none;
   }
 
   .creation {
@@ -283,41 +284,70 @@
   }
 
   .article-body-container p:last-child {
-    font-size: 4vw !important;
-    text-align: left !important;
-    line-height: 18px !important;
+    font-size: 5vw !important;
+    line-height: 20px !important;
     font-weight: 500 !important;
+    text-align: left !important;
+    columns: 2;
   }
 
   #single-card-body {
-    font-size: 5vw;
+    font-size: 5.5vw;
     line-height: 6vw;
     text-align: center;
   }
 
   #single-card-body::first-letter {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 
   #single-card-body-bold {
-    font-size: 9vw;
+    font-size: 7vw;
     margin: 4vw 5vw;
     border: none;
     line-height: 30px;
+    hyphens: auto;
   }
 
   .voting {
-    margin: auto;
     padding: 0;
+    margin-top: 4vw;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 3vw;
+  }
+
+  .voting-value p {
+    font-size: 27vw;
   }
 
   .voting-text {
     margin: auto;
+    gap: 0;
+    margin-right: 4vw;
+    margin-left: -7vw;
+    margin-top: 14vw;
+    opacity: 95%;
+  }
+
+  .voting-text button {
+    font-size: 20vw !important;
+  }
+
+  #v-text {
+    margin: 0;
+    padding: 0;
+    margin-top: -55px;
+  }
+
+  .toggle-container {
+    padding-bottom: 25vw;
   }
 
   #toggle-comments {
-    margin: auto;
-    padding: 5vw;
+    margin: 0;
+    padding: 5vw 1vw;
     font-size: 1.5em;
+    text-align: center;
   }
 }

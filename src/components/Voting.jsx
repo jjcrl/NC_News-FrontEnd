@@ -25,7 +25,7 @@ export const Voting = (props) => {
 
   return (
     <div className={props.comment ? "voting-comment" : "voting"}>
-      <div className="voting-value">
+      <div className={props.comment ? "voting-value-comment" : "voting-value"}>
         <p>{votes}</p>
       </div>
       <div className={props.comment ? "voting-comment-text" : "voting-text"}>

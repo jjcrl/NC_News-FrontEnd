@@ -254,7 +254,8 @@
 
 @media only screen and (max-width: 390px) {
   .top-articles {
-    gap: 2vw;
+    gap: 1vw;
+    margin: 5vw 3vw;
   }
 
   .top-articles ul {
@@ -262,16 +263,16 @@
     overflow: scroll;
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 0.5vw;
   }
 
   .top-articles li:last-child {
     display: none;
   }
 
-  .top-articles li:nth-last-child(2) {
+  /* .top-articles li:nth-last-child(2) {
     display: none;
-  }
+  } */
 
   .card-info-big {
     font-size: 3.5vw;
@@ -283,30 +284,35 @@
   }
 
   #top-snippet {
-    font-size: 4.6vw;
-    line-height: 4.6vw;
+    font-size: 5.3vw;
+    line-height: 5.5vw;
+    font-weight: 500;
   }
 
   #top-title {
-    font-size: 1.8em;
+    font-size: 2em;
     padding-bottom: 10px;
-    line-height: 25px;
+    line-height: 30px;
+    font-weight: 600;
   }
 
   .top-article-card {
-    min-width: min-content;
-    padding: 2.3vw;
+    min-width: fit-content;
+    padding: 1.5vw;
+    border-radius: 5px;
   }
 
   .big-top-article-card {
     width: fit-content;
-    padding: 15px;
+    padding: 2.8vw;
+    border-radius: 5px;
   }
 
   #top4-title {
-    font-size: 3.5vw;
+    font-size: 3.2vw;
     padding-bottom: 5px;
-    line-height: 14px;
+    line-height: 12px;
+    font-weight: 500;
   }
 
   #top4-article-card-author {
@@ -315,40 +321,41 @@
   }
 
   #xs-top-snippet {
-    font-size: 4.3vw;
-    line-height: 4vw;
+    font-size: 4.1vw;
+    line-height: 3.3vw;
+    font-weight: 400;
   }
 
   #engagement {
-    font-size: 8.7vw;
+    font-size: 9vw;
   }
 
   #engagement-text {
-    font-size: 6.7vw;
+    font-size: 7.5vw;
   }
 
   #engagement-score {
-    font-size: 13.5vw;
+    font-size: 15vw;
     margin-left: -10px;
   }
 
   #engagement-text-score {
-    font-size: 10vw;
+    font-size: 12vw;
   }
 
   #xs-engagement {
-    font-size: 6.9vw;
+    font-size: 5vw;
   }
 
   #xs-engagement-text {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   #xs-engagement-score {
-    font-size: 8.8vw;
+    font-size: 6.5vw;
   }
 
   #xs-engagement-text-score {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 }
