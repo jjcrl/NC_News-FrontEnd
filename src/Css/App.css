@@ -515,6 +515,8 @@ a {
 
   .voting-comment {
     justify-content: flex-end;
+    margin-top: -20px;
+    margin-right: 10px;
   }
 
   .comments-container {
@@ -529,12 +531,12 @@ a {
 
   .voting-comment-text {
     margin: 0;
-    margin-left: -15px;
+    margin-left: -10px;
     margin-top: 15px;
   }
 
   .voting-value-comment p {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .dash {
