@@ -73,7 +73,7 @@ export const TopArticles = () => {
 
   return (
     <>
-      <p id="topper-title">Top Posts</p>
+      {/* <p id="topper-title">Top Posts</p> */}
       <div className="top-articles">
         <div className="big-top-article-card">
           {/* <Gen top={true} /> */}
