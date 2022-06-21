@@ -39,6 +39,7 @@ jobs:
         run: netlify deploy --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{secrets.NETLIFY_AUTH_TOKEN}}
+          build-dir: './build'
  
 
 
