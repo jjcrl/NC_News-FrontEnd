@@ -1,7 +1,7 @@
 # NC News Front End
 
 One week project completed during the Northcoders 13 week bootcamp built with React.js, Axios, Node.js, and hosted with Netlify.
-This project also utilises my Back End project, also completed during the bootcamp: https://github.com/jjcrl/nc_news-frontend
+This project also utilises my Back End project, also completed during the bootcamp: https://github.com/jjcrl/nc_news-backend
 
 ## Hosted Site
 [www.jjcrl-nc-news
