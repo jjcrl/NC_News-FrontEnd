@@ -44,7 +44,7 @@ export const TopicCard = (props) => {
       <Link to={`/articles/topic/${props.topic.slug}`}>
         <div className="single-topic-card-main">
           <div className="xs-topic-card-info-container">
-            <p id="topic-title-main">{props.topic.slug}</p>
+            <p id="topic-title-main">✧/{props.topic.slug}</p>
           </div>
 
           <div className="xs-stats-container">

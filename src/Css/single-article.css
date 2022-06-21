@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap");
+
 .single-article-card {
   display: flex;
   flex-direction: column;
@@ -14,14 +16,13 @@
 }
 
 #single-title {
-  font-size: 5.5vw;
-  font-weight: 800;
+  font-size: 9vw;
   text-align: center;
   margin: auto;
-  width: 70%;
-  font-style: italic;
-  font-variant: small-caps;
   margin-top: 15vh;
+  font-family: "Grenze Gotisch", cursive;
+  width: 70%;
+  text-decoration: underline #6f6f6f0b;
 }
 
 #single-author {
@@ -53,27 +54,29 @@
 
 #single-card-body {
   color: #181315;
-  font-weight: 600;
-  font-size: 2.8vw;
+  font-weight: 500;
+  font-size: 2vw;
   letter-spacing: 0.5px;
-  word-spacing: 2px;
+  word-spacing: 1.5px;
+  line-height: 4.5vh;
   text-align: left;
   margin: 0 1vw;
-  line-height: 5vh;
 }
 
 #single-card-body-bold {
-  font-weight: 700;
-  font-size: 3.2vw;
-  font-style: italic;
-  line-height: 5.5vh;
   letter-spacing: 1px;
-  word-spacing: -3px;
-  margin: 4vh;
+  word-spacing: 2px;
+  line-height: 5vh;
+  font-weight: 600;
+  font-size: 3vw;
+  font-style: italic;
+  margin: auto;
   text-align: center;
-  border-left: solid 5px #181315;
-  border-right: solid 5px #181315;
-  padding: 2vw;
+
+  padding: 2vw 4vw;
+  text-align: center;
+  width: 85%;
+  hyphens: auto !important;
 }
 
 #single-article-card-topic {
@@ -94,7 +97,7 @@
 .article-body-container {
   display: flex;
   flex-direction: column;
-  margin: 0 3vw;
+  margin: 0 7vw;
   width: fit-content;
 }
 
@@ -102,6 +105,8 @@
   display: flex;
   flex-direction: row;
   margin: 0 5vw;
+  z-index: 500;
+  background-color: whitesmoke;
 }
 
 #single-article-card-topic {
