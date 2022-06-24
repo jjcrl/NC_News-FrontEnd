@@ -1,4 +1,4 @@
-# [www.jjcrl-nc-news
+[www.jjcrl-nc-news
 
 ## React.js News Agregration WebApp
 
