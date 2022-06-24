@@ -1,4 +1,4 @@
-# https://www.jjcrl-nc-news
+# https://jjcrl-nc-news.netlify.app
 
 ## React.js News Agregration WebApp
 
