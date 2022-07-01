@@ -56,25 +56,23 @@
 #single-card-body {
   color: #181315;
   font-weight: 500;
-  font-size: 2vw;
-  letter-spacing: 0.5px;
+  font-size: 2.2vw;
+  letter-spacing: 0.1px;
   word-spacing: 1.5px;
-  line-height: 4.5vh;
+  line-height: 120%;
   text-align: left;
-  margin: 0 1vw;
+  margin: 0;
 }
 
 #single-card-body-bold {
-  letter-spacing: 1px;
   word-spacing: 2px;
-  line-height: 5vh;
+  line-height: 125%;
   font-weight: 600;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-style: italic;
   margin: auto;
   text-align: center;
-
-  padding: 2vw 4vw;
+  padding: 2.5vw 4vw;
   text-align: center;
   width: 85%;
   hyphens: auto !important;
@@ -99,6 +97,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 7vw;
+  padding-top: 3vw;
   width: fit-content;
   background-color: whitesmoke;
 }
@@ -106,7 +105,7 @@
 .main-body-container {
   display: flex;
   flex-direction: row;
-  padding: 0 5vw;
+  padding: 1vw 5vw;
   z-index: 500;
   background-color: whitesmoke;
 }
@@ -119,16 +118,14 @@
   background-color: rgba(255, 255, 255, 0.938);
   display: flex;
   flex-direction: column;
-  width: 27%;
+  width: 25%;
   position: sticky;
   top: 55px;
   border-radius: 5px;
-  max-height: 540px;
-  margin-left: 3em;
+  max-height: 530px;
   margin-top: 3em;
   padding-left: 1em;
-  margin-bottom: 5em;
-  padding-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 .single-topic-card button {
@@ -187,11 +184,11 @@
 .stats {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 #stats {
-  font-size: 4em;
+  font-size: 3.2em;
   font-style: italic;
   font-weight: 800;
   margin: auto;

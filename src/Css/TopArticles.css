@@ -25,7 +25,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 1.5vw;
+  padding: 1.2vw;
   width: fit-content;
 }
 
@@ -55,11 +55,11 @@
 }
 
 #top-snippet {
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   font-weight: 600;
   opacity: 50%;
   margin: auto;
-  line-height: 2.5vw;
+  line-height: 90%;
   letter-spacing: -0.1px;
   padding: 0.5vw 0;
   font-style: italic;
@@ -116,7 +116,7 @@
   color: whitesmoke;
   font-weight: 600;
   opacity: 30%;
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin: 5px 0;
   font-style: italic;
 }
@@ -128,7 +128,7 @@
 #top4-article-card-author {
   color: #181315;
   margin: 0;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-style: italic;
   font-weight: 600;
   opacity: 50%;
